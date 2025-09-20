@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mapa Interactivo de Japón</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Noto Serif JP', serif;
+      background: #fdf6f0;
+    }
+
+    #map {
+      height: 100vh;
+      width: 100%;
+      border: 6px solid #e63946;
+    }
+
+    #info {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: #fff8f5;
+      padding: 15px;
+      border-radius: 12px;
+      width: 320px;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      border: 2px solid #e63946;
+      z-index: 1000; /* para que quede encima del mapa */
+      transition: all 0.3s ease;
+    }
+
+    #info img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      border: 2px solid #e63946;
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #e63946;
+      font-weight: bold;
+      border-bottom: 2px solid #e63946;
+      padding-bottom: 5px;
+    }
+
+    p, li {
+      color: #222;
+      line-height: 1.5;
+    }
+
+    ul {
+      padding-left: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <div id="info"><h2>Haz clic en una prefectura</h2></div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="prefecturasInfo.js"></script>
+  <script>
+    // Crear mapa centrado en Japón
+    const map = L.map('map').setView([37.5, 137.5], 5);
+
+    // Añadir capa base
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19
+    }).addTo(map);
+
+    // Limitar el mapa solo a Japón
+    const bounds = [
+      [24.396308, 122.93457], // suroeste
+      [45.551483, 153.986672] // noreste
+    ];
+    map.setMaxBounds(bounds);
+    map.fitBounds(bounds);
+
+    // Función para mostrar información
+    function mostrarInfo(nombre) {
+      const info = prefecturasInfo[nombre];
+      if (info) {
+        document.getElementById('info').innerHTML = `
+          <h2>${nombre}</h2>
+          <img src="${info.imagen}" alt="${nombre}">
+          <p><b>Capital:</b> ${info.capital}</p>
+          <p><b>Cultura:</b><ul>${info.cultura.map(c => `<li>${c}</li>`).join("")}</ul></p>
+          <p><b>Turismo:</b><ul>${info.turismo.map(t => `<li>${t}</li>`).join("")}</ul></p>
+          <p><b>Datos curiosos:</b><ul>${info.datosCuriosos.map(d => `<li>${d}</li>`).join("")}</ul></p>
+        `;
+      } else {
+        document.getElementById('info').innerHTML = `<h2>${nombre}</h2><p>Información no disponible.</p>`;
+      }
+    }
+
+    // Cargar el GeoJSON de Japón
+    fetch("japan.geojson.json")
+      .then(res => res.json())
+      .then(data => {
+        L.geoJSON(data, {
+          onEachFeature: (feature, layer) => {
+            layer.on('click', () => mostrarInfo(feature.properties.name));
+            layer.on('mouseover', () => {
+              layer.setStyle({ fillOpacity: 0.7, fillColor: "#ffcc00" });
+            });
+            layer.on('mouseout', () => {
+              layer.setStyle({ fillOpacity: 0.5, fillColor: "#4a90e2" });
+            });
+          },
+          style: {
+            color: "#333",
+            weight: 1.2,
+            fillColor: "#4a90e2",
+            fillOpacity: 0.5
+          }
+        }).addTo(map);
+      })
+      .catch(err => console.error("Error cargando GeoJSON:", err));
+  </script>
+</body>
+</html>
