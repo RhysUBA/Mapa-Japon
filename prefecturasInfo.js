@@ -33,7 +33,7 @@ const prefecturasInfo = {
     datosCuriosos: [
     "En su capital también llamada Aomori se registra las mayores nevadas en el mundo."
 ],
-    imagen: ""
+    imagen: "imagenes/Aomori.png"
   },
   "Iwate": {
     capital: "",
@@ -50,7 +50,7 @@ const prefecturasInfo = {
     datosCuriosos: [
     "La prefectura es conocida por la obra literaria Tōno Monogatari de Yanagita Kunio que recopila 119 historias folclóricas transmitidas de forma oral."
 ],
-    imagen: ""
+    imagen: "imagenes/Iwate.png"
   },
   "Miyagi": {
     capital: "",
@@ -67,7 +67,7 @@ const prefecturasInfo = {
     datosCuriosos: [
     "En las montañas de Zao ocurre un fenómeno meteorológico donde cientos de árboles se recubren con nieve y hielo, lo cual les da una apariencia similar a “monstruos”."
 ],
-    imagen: ""
+    imagen: "imagenes/Miyagi.png"
   },
   "Akita": {
     capital: "",
@@ -84,7 +84,7 @@ const prefecturasInfo = {
     datosCuriosos: [
     "Es la cuna de la raza de perros Akita Inu (como Hachiko, el perro fiel)."
 ],
-    imagen: ""
+    imagen: "imagenes/Akita.png"
   },
   "Yamagata": {
     capital: "",
@@ -100,7 +100,7 @@ const prefecturasInfo = {
     datosCuriosos: [
     "Yamagata es el productor de aproximadamente el 70% de las cerezas en Japón."
 ],
-    imagen: ""
+    imagen: "imagenes/Yamagata.png"
   },
   "Fukushima": {
     capital: "",
@@ -117,7 +117,7 @@ const prefecturasInfo = {
     datosCuriosos: [
     "Fukushima es el mayor productor de duraznos de Japón"
 ],
-    imagen: ""
+    imagen: "imagenes/Fukushima.png"
   },
   "Ibaraki": {
     capital: "",
@@ -133,7 +133,7 @@ const prefecturasInfo = {
     datosCuriosos: [
     "Ibaraki es considera como la cuna del aikido, ya que en esta prefectura nació su fundador Morihei Ueshiba."
 ],
-    imagen: ""
+    imagen: "imagenes/Ibaraki.png"
   },
   "Tochigi": {
     capital: "",
@@ -150,7 +150,7 @@ const prefecturasInfo = {
     datosCuriosos: [
     "Tochigi es el mayor productor de fresas de Japón"
 ],
-    imagen: ""
+    imagen: "imagenes/Tochigi.png"
   },
   "Gunma": {
     capital: "",
@@ -167,7 +167,7 @@ const prefecturasInfo = {
     datosCuriosos: [
     "Gunma produce el 80% de los darumas de Japón"
 ],
-    imagen: ""
+    imagen: "imagenes/Gunma.png"
   },
   "Saitama": {
     capital: "",
@@ -184,7 +184,7 @@ const prefecturasInfo = {
     datosCuriosos: [
     "Es el escenario del anime \"Lucky Star\" (en la ciudad de Washimiya)."
 ],
-    imagen: ""
+    imagen: "imagenes/Saitama.png"
   },
   "Chiba": {
     capital: "",
@@ -201,7 +201,7 @@ const prefecturasInfo = {
     datosCuriosos: [
     "Kentaro Miura el aclamado mangaka creador de Berserk, nació en la ciudad de Chiba."
 ],
-    imagen: ""
+    imagen: "imagenes/Chiba.png"
   },
   "Tokyo": {
     capital: "",
@@ -235,7 +235,7 @@ const prefecturasInfo = {
     datosCuriosos: [
     "La ciudad de Yokohama en la prefectura Kanagawa fue el epicentro de la modernización durante la Era Meiji (1868-1912)."
 ],
-    imagen: ""
+    imagen: "imagenes/Kanagawa.png"
   },
   "Niigata": {
     capital: "",
@@ -252,7 +252,7 @@ const prefecturasInfo = {
     datosCuriosos: [
     "Niigata es tan famosa por su arroz que tiene su propia \"Ruta del Arroz\", donde se pueden visitar arrozales, molinos y fábricas de sake."
 ],
-    imagen: ""
+    imagen: "imagenes/Niigata.png"
   },
   "Toyama": {
     capital: "",
@@ -269,7 +269,7 @@ const prefecturasInfo = {
     datosCuriosos: [
     "En Toyama se produce aproximadamente el 90% de los productos de bronce de Japón."
 ],
-    imagen: ""
+    imagen: "imagenes/Toyama.png"
   },
   "Ishikawa": {
     capital: "",
@@ -286,7 +286,7 @@ const prefecturasInfo = {
     datosCuriosos: [
     "Kanazawa, la capital de Ishikawa, produce el 99% de la hoja de oro de Japón."
 ],
-    imagen: ""
+    imagen: "imagenes/Ishikawa.png"
   },
   "Fukui": {
     capital: "",
@@ -303,7 +303,7 @@ const prefecturasInfo = {
     datosCuriosos: [
     "La ciudad de Sabae, en Fukui, produce alrededor del 90% de las monturas para gafas fabricadas en Japón."
 ],
-    imagen: ""
+    imagen: "imagenes/Fukui.png"
   },
   "Yamanashi": {
     capital: "",
@@ -320,7 +320,7 @@ const prefecturasInfo = {
     datosCuriosos: [
     "Yamanashi es el mayor productor de uvas y melocotones de Japón"
 ],
-    imagen: ""
+    imagen: "imagenes/Yamanashi.png"
   },
   "Nagano": {
     capital: "",
@@ -337,7 +337,7 @@ const prefecturasInfo = {
     datosCuriosos: [
     "Los Juegos Olímpicos de Invierno de 1998 se celebraron en Nagano."
 ],
-    imagen: ""
+    imagen: "imagenes/Nagano.png"
   },
   "Gifu": {
     capital: "",
@@ -354,7 +354,7 @@ const prefecturasInfo = {
     datosCuriosos: [
     "La cerámica proveniente de Gifu representa aproximadamente el 50% de la producción total en Japón."
 ],
-    imagen: ""
+    imagen: "imagenes/Gifu.png"
   },
   "Shizuoka": {
     capital: "",
@@ -369,7 +369,7 @@ const prefecturasInfo = {
     "Museo del Té Verde:"
 ],
     datosCuriosos: [],
-    imagen: ""
+    imagen: "imagenes/Shizuoka.png"
   },
   "Aichi": {
     capital: "",
@@ -386,7 +386,7 @@ const prefecturasInfo = {
     datosCuriosos: [
     "La ciudad de Seto en la prefectura Aichi, es la cuna de la cerámica esmaltada en el país, lográndose ver su influencia con la palabra japonesa para cerámica o vajilla es \"setomono\" literalmente significa \"cosas de Seto”."
 ],
-    imagen: ""
+    imagen: "imagenes/Aichi.png"
   },
   "Mie": {
     capital: "",
@@ -403,7 +403,7 @@ const prefecturasInfo = {
     datosCuriosos: [
     "La prefectura Mie es una de las dos cunas del ninjutsu en Japón."
 ],
-    imagen: ""
+    imagen: "imagenes/Mie.png"
   },
   "Shiga": {
     capital: "",
@@ -420,7 +420,7 @@ const prefecturasInfo = {
     datosCuriosos: [
     "El lago Biwa es uno de los 20 lagos más antiguos del mundo"
 ],
-    imagen: ""
+    imagen: "imagenes/Shiga.png"
   },
   "Kyōto": {
     capital: "",
@@ -437,7 +437,7 @@ const prefecturasInfo = {
     datosCuriosos: [
     "Kioto fue la capital imperial de Japón durante más de 1,000 años (794-1868)"
 ],
-    imagen: ""
+    imagen: "imagenes/Kyōto.png"
   },
   "Ōsaka": {
     capital: "",
@@ -454,7 +454,7 @@ const prefecturasInfo = {
     datosCuriosos: [
     "El nombre \"Osaka\" (大阪) significa literalmente \"colina grande\"."
 ],
-    imagen: ""
+    imagen: "imagenes/Ōsaka.png"
   },
   "Hyōgo": {
     capital: "",
@@ -471,7 +471,7 @@ const prefecturasInfo = {
     datosCuriosos: [
     "Según el Kojiki (el libro más antiguo de Japón), la isla de Awaji fue la primera isla creada por los dioses Izanagi e Izanami; por esto, se considera el \"lugar de nacimiento de Japón\""
 ],
-    imagen: ""
+    imagen: "imagenes/Hyōgo.png"
   },
   "Nara": {
     capital: "",
@@ -488,7 +488,7 @@ const prefecturasInfo = {
     datosCuriosos: [
     "Nara fue la primera capital permanente de Japón, establecida en el año 710."
 ],
-    imagen: ""
+    imagen: "imagenes/Nara.png"
   },
   "Wakayama": {
     capital: "",
@@ -505,7 +505,7 @@ const prefecturasInfo = {
     datosCuriosos: [
     "Wakayama es el mayor productor de mandarinas de Japón."
 ],
-    imagen: ""
+    imagen: "imagenes/Wakayama.png"
   },
   "Tottori": {
     capital: "",
@@ -522,7 +522,7 @@ const prefecturasInfo = {
     datosCuriosos: [
     "Tottori es la prefectura menos poblada de Japón."
 ],
-    imagen: ""
+    imagen: "imagenes/Tottori.png"
   },
   "Shimane": {
     capital: "",
@@ -539,7 +539,7 @@ const prefecturasInfo = {
     datosCuriosos: [
     "El acero de la más alta calidad para forjar las legendarias espadas samuráis se producía en Shimane."
 ],
-    imagen: ""
+    imagen: "imagenes/Shimane.png"
   },
   "Okayama": {
     capital: "",
@@ -556,105 +556,105 @@ const prefecturasInfo = {
     datosCuriosos: [
     "Okayama se promociona como el \"Reino del Sol\" por su clima notablemente soleado en comparación con otras regiones de Japón"
 ],
-    imagen: ""
+    imagen: "imagenes/Okayama.png"
   },
   "Hiroshima": {
     capital: "",
     cultura: [],
     turismo: [],
     datosCuriosos: [],
-    imagen: ""
+    imagen: "imagenes/Hiroshima.png"
   },
   "Yamaguchi": {
     capital: "",
     cultura: [],
     turismo: [],
     datosCuriosos: [],
-    imagen: ""
+    imagen: "imagenes/Yamaguchi.png"
   },
   "Tokushima": {
     capital: "",
     cultura: [],
     turismo: [],
     datosCuriosos: [],
-    imagen: ""
+    imagen: "imagenes/Tokushima.png"
   },
   "Kagawa": {
     capital: "",
     cultura: [],
     turismo: [],
     datosCuriosos: [],
-    imagen: ""
+    imagen: "imagenes/Kagawa.png"
   },
   "Ehime": {
     capital: "",
     cultura: [],
     turismo: [],
     datosCuriosos: [],
-    imagen: ""
+    imagen: "imagenes/Ehime.png"
   },
   "Kōchi": {
     capital: "",
     cultura: [],
     turismo: [],
     datosCuriosos: [],
-    imagen: ""
+    imagen: "imagenes/Kōchi.png"
   },
   "Fukuoka": {
     capital: "",
     cultura: [],
     turismo: [],
     datosCuriosos: [],
-    imagen: ""
+    imagen: "imagenes/Fukuoka.png"
   },
   "Saga": {
     capital: "",
     cultura: [],
     turismo: [],
     datosCuriosos: [],
-    imagen: ""
+    imagen: "imagenes/Saga.png"
   },
   "Nagasaki": {
     capital: "",
     cultura: [],
     turismo: [],
     datosCuriosos: [],
-    imagen: ""
+    imagen: "imagenes/Nagasaki.png"
   },
   "Kumamoto": {
     capital: "",
     cultura: [],
     turismo: [],
     datosCuriosos: [],
-    imagen: ""
+    imagen: "imagenes/Kumamoto.png"
   },
   "Ōita": {
     capital: "",
     cultura: [],
     turismo: [],
     datosCuriosos: [],
-    imagen: ""
+    imagen: "imagenes/Ōita.png"
   },
   "Miyazaki": {
     capital: "",
     cultura: [],
     turismo: [],
     datosCuriosos: [],
-    imagen: ""
+    imagen: "imagenes/Miyazaki.png"
   },
   "Kagoshima": {
     capital: "",
     cultura: [],
     turismo: [],
     datosCuriosos: [],
-    imagen: ""
+    imagen: "imagenes/Kagoshima.png"
   },
   "Okinawa": {
     capital: "",
     cultura: [],
     turismo: [],
     datosCuriosos: [],
-    imagen: ""
+    imagen: "imagenes/Okinawa.png"
   },
 };
 
