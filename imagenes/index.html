@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mapa Interactivo de Japón</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Noto Serif JP', serif;
+      background: #fdf6f0;
+      overflow: hidden;
+    }
+
+    #map {
+      height: 100vh;
+      width: 100%;
+      border: 6px solid #e63946;
+    }
+
+    #info {
+      position: absolute;
+      top: 80px;
+      right: 20px;
+      background: #fff8f5;
+      padding: 15px;
+      border-radius: 12px;
+      width: 320px;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      border: 2px solid #e63946;
+      z-index: 1000;
+      transition: all 0.3s ease;
+    }
+
+    #info img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      border: 2px solid #e63946;
+    }
+
+    #info::before {
+      content: "🍡"; /* dango decorativo */
+      position: absolute;
+      top: -15px;
+      left: -15px;
+      font-size: 28px;
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #e63946;
+      font-weight: bold;
+      border-bottom: 2px solid #e63946;
+      padding-bottom: 5px;
+    }
+
+    p, li {
+      color: #222;
+      line-height: 1.5;
+    }
+
+    ul {
+      padding-left: 18px;
+    }
+
+    /* Torii decorativo */
+    .torii-deco {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 180px;
+      z-index: 1200;
+    }
+
+    /* Pétalos de sakura cayendo */
+    .sakura-petal {
+      position: fixed;
+      top: -10px;
+      width: 20px;
+      height: 20px;
+      background: url('imagenes/sakura.png') no-repeat center/contain;
+      animation: fall 10s linear infinite;
+      z-index: 9999;
+      pointer-events: none;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(0) rotate(0deg); }
+      100% { transform: translateY(110vh) rotate(360deg); }
+    }
+
+    /* Controles de música */
+    #music-controls {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background: #fff8f5;
+      padding: 8px;
+      border-radius: 25px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      border: 2px solid #e63946;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.3s ease;
+      width: 40px;
+      overflow: hidden;
+    }
+
+    #music-controls:hover {
+      width: 180px;
+    }
+
+    #music-toggle {
+      background: #e63946;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 35px;
+      height: 35px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      flex-shrink: 0;
+      transition: all 0.2s ease;
+    }
+
+    #music-toggle:hover {
+      background: #d62b3a;
+      transform: scale(1.05);
+    }
+
+    #volume-control {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      width: 0;
+      overflow: hidden;
+    }
+
+    #music-controls:hover #volume-control {
+      opacity: 1;
+      width: 100px;
+    }
+
+    #volume-slider {
+      width: 70px;
+      height: 4px;
+      -webkit-appearance: none;
+      appearance: none;
+      background: #ddd;
+      outline: none;
+      border-radius: 5px;
+    }
+
+    #volume-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #e63946;
+      cursor: pointer;
+    }
+
+    #volume-slider::-moz-range-thumb {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #e63946;
+      cursor: pointer;
+      border: none;
+    }
+
+    .music-info {
+      font-size: 10px;
+      color: #666;
+      white-space: nowrap;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    #music-controls:hover .music-info {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <div id="info"><h2>Haz clic en una prefectura</h2></div>
+
+  <!-- Torii decorativo -->
+  <img src="imagenes/torii.png" alt="Torii" class="torii-deco">
+
+  <!-- Pétalos de sakura -->
+  <div class="sakura-petal" style="left:10%; animation-delay:0s;"></div>
+  <div class="sakura-petal" style="left:30%; animation-delay:2s;"></div>
+  <div class="sakura-petal" style="left:50%; animation-delay:4s;"></div>
+  <div class="sakura-petal" style="left:70%; animation-delay:6s;"></div>
+  <div class="sakura-petal" style="left:90%; animation-delay:8s;"></div>
+  
+  <!-- Controles de música -->
+  <div id="music-controls">
+    <button id="music-toggle">▶</button>
+    <div id="volume-control">
+      <span style="font-size: 12px;">🔈</span>
+      <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="0.5">
+    </div>
+    <div class="music-info">Warabe no Uta</div>
+  </div>
+
+  <audio id="background-music" loop>
+    <source src="Warabe Uta Tennyo no Uta.mp3" type="audio/mpeg">
+    Tu navegador no soporta el elemento de audio.
+  </audio>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="prefecturasInfo.js"></script>
+  <script>
+    // Crear mapa centrado en Japón
+    const map = L.map('map').setView([37.5, 137.5], 5);
+
+    // Añadir capa base
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19
+    }).addTo(map);
+
+    // Limitar el mapa solo a Japón
+    const bounds = [
+      [24.396308, 122.93457], // suroeste
+      [45.551483, 153.986672] // noreste
+    ];
+    map.setMaxBounds(bounds);
+    map.fitBounds(bounds);
+
+    // Función para mostrar información
+    function mostrarInfo(nombre) {
+      const info = prefecturasInfo[nombre];
+      if (info) {
+        document.getElementById('info').innerHTML = `
+          <h2>${nombre}</h2>
+          <img src="${info.imagen}" alt="${nombre}">
+          <p><b>Capital:</b> ${info.capital}</p>
+          <p><b>Cultura:</b><ul>${info.cultura.map(c => `<li>${c}</li>`).join("")}</ul></p>
+          <p><b>Turismo:</b><ul>${info.turismo.map(t => `<li>${t}</li>`).join("")}</ul></p>
+          <p><b>Datos curiosos:</b><ul>${info.datosCuriosos.map(d => `<li>${d}</li>`).join("")}</ul></p>
+        `;
+      } else {
+        document.getElementById('info').innerHTML = `<h2>${nombre}</h2><p>Información no disponible.</p>`;
+      }
+    }
+
+    // Control de música
+    const backgroundMusic = document.getElementById('background-music');
+    const musicToggle = document.getElementById('music-toggle');
+    const volumeSlider = document.getElementById('volume-slider');
+    let isMusicPlaying = false;
+    backgroundMusic.volume = volumeSlider.value;
+
+    volumeSlider.addEventListener('input', function() {
+      backgroundMusic.volume = this.value;
+    });
+
+    musicToggle.addEventListener('click', function() {
+      if (isMusicPlaying) {
+        backgroundMusic.pause();
+        musicToggle.textContent = '▶';
+      } else {
+        backgroundMusic.play().catch(error => console.log('Autoplay bloqueado:', error));
+        musicToggle.textContent = '❚❚';
+      }
+      isMusicPlaying = !isMusicPlaying;
+    });
+
+    window.addEventListener('click', function() {
+      if (!isMusicPlaying) {
+        backgroundMusic.play().then(() => {
+          isMusicPlaying = true;
+          musicToggle.textContent = '❚❚';
+        }).catch(error => console.log('Autoplay bloqueado:', error));
+      }
+    }, { once: true });
+
+    // Cargar el GeoJSON de Japón con estilo invisible pero clicable
+    fetch("japan.geojson.json")
+      .then(res => res.json())
+      .then(data => {
+        L.geoJSON(data, {
+          onEachFeature: (feature, layer) => {
+            const nombrePrefectura = feature.properties.name;
+            layer.on('click', () => mostrarInfo(nombrePrefectura));
+          },
+          style: {
+            color: "transparent",
+            weight: 0,
+            fillColor: "transparent",
+            fillOpacity: 0
+          }
+        }).addTo(map);
+      })
+      .catch(err => console.error("Error cargando GeoJSON:", err));
+  </script>
+</body>
+</html>
