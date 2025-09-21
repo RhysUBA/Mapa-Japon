@@ -58,11 +58,27 @@
     ul {
       padding-left: 18px;
     }
+
+    /* Estilos para el tooltip de prefecturas */
+    .prefecture-tooltip {
+      position: absolute;
+      background: rgba(255, 248, 245, 0.95);
+      border: 2px solid #e63946;
+      border-radius: 6px;
+      padding: 8px 12px;
+      font-weight: bold;
+      pointer-events: none;
+      z-index: 999;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      transition: opacity 0.3s;
+      opacity: 0;
+    }
   </style>
 </head>
 <body>
   <div id="map"></div>
   <div id="info"><h2>Haz clic en una prefectura</h2></div>
+  <div id="tooltip" class="prefecture-tooltip"></div>
 
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script src="prefecturasInfo.js"></script>
@@ -82,6 +98,9 @@
     ];
     map.setMaxBounds(bounds);
     map.fitBounds(bounds);
+
+    // Obtener referencia al tooltip
+    const tooltip = document.getElementById('tooltip');
 
     // Función para mostrar información
     function mostrarInfo(nombre) {
@@ -106,13 +125,35 @@
       .then(data => {
         L.geoJSON(data, {
           onEachFeature: (feature, layer) => {
-            layer.on('click', () => mostrarInfo(feature.properties.name));
-            layer.on('mouseover', () => {
+            const nombrePrefectura = feature.properties.name;
+            
+            // Evento al pasar el cursor sobre la prefectura
+            layer.on('mouseover', function(e) {
+              // Cambiar estilo al pasar el cursor
               layer.setStyle({ fillOpacity: 0.7, fillColor: "#ffcc00" });
+              
+              // Mostrar tooltip con el nombre de la prefectura
+              const latlng = e.latlng;
+              tooltip.innerHTML = nombrePrefectura;
+              tooltip.style.opacity = '1';
+              
+              // Posicionar el tooltip cerca del cursor
+              const point = map.latLngToContainerPoint(latlng);
+              tooltip.style.left = (point.x + 10) + 'px';
+              tooltip.style.top = (point.y - 25) + 'px';
             });
-            layer.on('mouseout', () => {
+            
+            // Evento al quitar el cursor de la prefectura
+            layer.on('mouseout', function() {
+              // Restaurar estilo original
               layer.setStyle({ fillOpacity: 0.5, fillColor: "#4a90e2" });
+              
+              // Ocultar tooltip
+              tooltip.style.opacity = '0';
             });
+            
+            // Evento al hacer clic en la prefectura
+            layer.on('click', () => mostrarInfo(nombrePrefectura));
           },
           style: {
             color: "#333",
@@ -121,6 +162,13 @@
             fillOpacity: 0.5
           }
         }).addTo(map);
+        
+        // Actualizar la posición del tooltip cuando se mueve el cursor
+        map.on('mousemove', function(e) {
+          const point = map.latLngToContainerPoint(e.latlng);
+          tooltip.style.left = (point.x + 10) + 'px';
+          tooltip.style.top = (point.y - 25) + 'px';
+        });
       })
       .catch(err => console.error("Error cargando GeoJSON:", err));
   </script>
