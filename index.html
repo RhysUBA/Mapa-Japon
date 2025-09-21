@@ -21,7 +21,7 @@
 
     #info {
       position: absolute;
-      top: 80px; /* lo bajo un poco para que no choque con el torii */
+      top: 20px;
       right: 20px;
       background: #fff8f5;
       padding: 15px;
@@ -33,14 +33,6 @@
       border: 2px solid #e63946;
       z-index: 1000;
       transition: all 0.3s ease;
-    }
-
-    #info::before {
-      content: "🍡"; /* dango decorativo */
-      position: absolute;
-      top: -15px;
-      left: -15px;
-      font-size: 28px;
     }
 
     #info img {
@@ -79,33 +71,6 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
       transition: opacity 0.3s;
       opacity: 0;
-    }
-
-    /* Torii decorativo */
-    .torii-deco {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 180px;
-      z-index: 1200;
-    }
-
-    /* Pétalos de sakura cayendo */
-    .sakura-petal {
-      position: fixed;
-      top: -10px;
-      width: 20px;
-      height: 20px;
-      background: url('imagenes/sakura.png') no-repeat center/contain;
-      animation: fall 10s linear infinite;
-      z-index: 9999;
-      pointer-events: none;
-    }
-
-    @keyframes fall {
-      0% { transform: translateY(0) rotate(0deg); }
-      100% { transform: translateY(110vh) rotate(360deg); }
     }
 
     /* Controles de música minimalistas */
@@ -214,16 +179,6 @@
   <div id="info"><h2>Haz clic en una prefectura</h2></div>
   <div id="tooltip" class="prefecture-tooltip"></div>
   
-  <!-- Torii decorativo -->
-  <img src="imagenes/torii.png" alt="Torii" class="torii-deco">
-
-  <!-- Pétalos de sakura -->
-  <div class="sakura-petal" style="left:10%; animation-delay:0s;"></div>
-  <div class="sakura-petal" style="left:30%; animation-delay:2s;"></div>
-  <div class="sakura-petal" style="left:50%; animation-delay:4s;"></div>
-  <div class="sakura-petal" style="left:70%; animation-delay:6s;"></div>
-  <div class="sakura-petal" style="left:90%; animation-delay:8s;"></div>
-  
   <!-- Controles de música minimalistas -->
   <div id="music-controls">
     <button id="music-toggle">▶</button>
@@ -285,12 +240,15 @@
     const volumeSlider = document.getElementById('volume-slider');
     let isMusicPlaying = false;
 
+    // Configurar volumen inicial
     backgroundMusic.volume = volumeSlider.value;
 
+    // Controlar el volumen
     volumeSlider.addEventListener('input', function() {
       backgroundMusic.volume = this.value;
     });
 
+    // Reproducir o pausar la música
     musicToggle.addEventListener('click', function() {
       if (isMusicPlaying) {
         backgroundMusic.pause();
@@ -304,6 +262,7 @@
       isMusicPlaying = !isMusicPlaying;
     });
 
+    // Intentar iniciar la música automáticamente
     window.addEventListener('click', function() {
       if (!isMusicPlaying) {
         backgroundMusic.play().then(() => {
@@ -325,33 +284,41 @@
             
             // Evento al pasar el cursor sobre la prefectura
             layer.on('mouseover', function(e) {
+              // Cambiar estilo al pasar el cursor
               layer.setStyle({ fillOpacity: 0.7, fillColor: "#ffcc00" });
+              
+              // Mostrar tooltip con el nombre de la prefectura
               const latlng = e.latlng;
               tooltip.innerHTML = nombrePrefectura;
               tooltip.style.opacity = '1';
+              
+              // Posicionar el tooltip cerca del cursor
               const point = map.latLngToContainerPoint(latlng);
               tooltip.style.left = (point.x + 10) + 'px';
               tooltip.style.top = (point.y - 25) + 'px';
             });
             
-            // Evento al quitar el cursor
+            // Evento al quitar el cursor de la prefectura
             layer.on('mouseout', function() {
-              layer.setStyle({ fillOpacity: 0, fillColor: "transparent" });
+              // Restaurar estilo original
+              layer.setStyle({ fillOpacity: 0.5, fillColor: "#4a90e2" });
+              
+              // Ocultar tooltip
               tooltip.style.opacity = '0';
             });
             
-            // Evento al hacer clic
+            // Evento al hacer clic en la prefectura
             layer.on('click', () => mostrarInfo(nombrePrefectura));
           },
           style: {
-            color: "transparent",
-            weight: 0,
-            fillColor: "transparent",
-            fillOpacity: 0
+            color: "#333",
+            weight: 1.2,
+            fillColor: "#4a90e2",
+            fillOpacity: 0.5
           }
         }).addTo(map);
-
-        // Actualizar tooltip
+        
+        // Actualizar la posición del tooltip cuando se mueve el cursor
         map.on('mousemove', function(e) {
           const point = map.latLngToContainerPoint(e.latlng);
           tooltip.style.left = (point.x + 10) + 'px';
