@@ -73,6 +73,33 @@
       opacity: 0;
     }
 
+    /* Torii decorativo */
+    .torii-deco {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 180px;
+      z-index: 1200;
+    }
+
+    /* Pétalos de sakura cayendo */
+    .sakura-petal {
+      position: fixed;
+      top: -10px;
+      width: 20px;
+      height: 20px;
+      background: url('imagenes/sakura.png') no-repeat center/contain;
+      animation: fall 10s linear infinite;
+      z-index: 9999;
+      pointer-events: none;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(0) rotate(0deg); }
+      100% { transform: translateY(110vh) rotate(360deg); }
+    }
+
     /* Controles de música minimalistas */
     #music-controls {
       position: absolute;
@@ -178,6 +205,16 @@
   <div id="map"></div>
   <div id="info"><h2>Haz clic en una prefectura</h2></div>
   <div id="tooltip" class="prefecture-tooltip"></div>
+
+  <!-- Torii decorativo -->
+  <img src="imagenes/torii.png" alt="Torii" class="torii-deco">
+
+  <!-- Pétalos de sakura -->
+  <div class="sakura-petal" style="left:10%; animation-delay:0s;"></div>
+  <div class="sakura-petal" style="left:30%; animation-delay:2s;"></div>
+  <div class="sakura-petal" style="left:50%; animation-delay:4s;"></div>
+  <div class="sakura-petal" style="left:70%; animation-delay:6s;"></div>
+  <div class="sakura-petal" style="left:90%; animation-delay:8s;"></div>
   
   <!-- Controles de música minimalistas -->
   <div id="music-controls">
