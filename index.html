@@ -95,10 +95,10 @@
       pointer-events: none;
     }
 
-    @keyframes fall {
-      0% { transform: translateY(0) rotate(0deg); }
-      100% { transform: translateY(110vh) rotate(360deg); }
-    }
+  @keyframes fall {
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+  }
 
     /* Controles de música minimalistas */
     #music-controls {
@@ -363,6 +363,32 @@
         });
       })
       .catch(err => console.error("Error cargando GeoJSON:", err));
+
+      // Generar pétalos infinitos
+function crearPetalo() {
+  const petalo = document.createElement('div');
+  petalo.classList.add('sakura-petal');
+
+  // posición horizontal aleatoria
+  petalo.style.left = Math.random() * 100 + 'vw';
+
+  // duración y tamaño aleatorios
+  const duracion = 7 + Math.random() * 5; // entre 7 y 12s
+  petalo.style.animationDuration = duracion + 's';
+  const size = 15 + Math.random() * 15; // entre 15px y 30px
+  petalo.style.width = size + 'px';
+  petalo.style.height = size + 'px';
+
+  document.body.appendChild(petalo);
+
+  // eliminarlo cuando termine la animación
+  setTimeout(() => {
+    petalo.remove();
+  }, duracion * 1000);
+}
+
+// lanzar pétalos cada 300ms
+setInterval(crearPetalo, 300);
   </script>
 </body>
 </html>
