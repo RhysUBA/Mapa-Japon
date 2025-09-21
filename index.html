@@ -31,7 +31,7 @@
       overflow-y: auto;
       box-shadow: 0 4px 12px rgba(0,0,0,0.3);
       border: 2px solid #e63946;
-      z-index: 1000; /* para que quede encima del mapa */
+      z-index: 1000;
       transition: all 0.3s ease;
     }
 
@@ -59,7 +59,6 @@
       padding-left: 18px;
     }
 
-    /* Estilos para el tooltip de prefecturas */
     .prefecture-tooltip {
       position: absolute;
       background: rgba(255, 248, 245, 0.95);
@@ -74,21 +73,27 @@
       opacity: 0;
     }
 
-    /* Controles de música */
+    /* Controles de música minimalistas */
     #music-controls {
       position: absolute;
       bottom: 20px;
       left: 20px;
       background: #fff8f5;
-      padding: 12px 15px;
-      border-radius: 12px;
+      padding: 8px;
+      border-radius: 25px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.3);
       border: 2px solid #e63946;
       z-index: 1000;
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 8px;
       transition: all 0.3s ease;
+      width: 40px;
+      overflow: hidden;
+    }
+
+    #music-controls:hover {
+      width: 180px;
     }
 
     #music-toggle {
@@ -96,13 +101,14 @@
       color: white;
       border: none;
       border-radius: 50%;
-      width: 40px;
-      height: 40px;
+      width: 35px;
+      height: 35px;
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 16px;
+      font-size: 14px;
+      flex-shrink: 0;
       transition: all 0.2s ease;
     }
 
@@ -114,12 +120,21 @@
     #volume-control {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 5px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      width: 0;
+      overflow: hidden;
+    }
+
+    #music-controls:hover #volume-control {
+      opacity: 1;
+      width: 100px;
     }
 
     #volume-slider {
-      width: 80px;
-      height: 5px;
+      width: 70px;
+      height: 4px;
       -webkit-appearance: none;
       appearance: none;
       background: #ddd;
@@ -130,16 +145,16 @@
     #volume-slider::-webkit-slider-thumb {
       -webkit-appearance: none;
       appearance: none;
-      width: 15px;
-      height: 15px;
+      width: 12px;
+      height: 12px;
       border-radius: 50%;
       background: #e63946;
       cursor: pointer;
     }
 
     #volume-slider::-moz-range-thumb {
-      width: 15px;
-      height: 15px;
+      width: 12px;
+      height: 12px;
       border-radius: 50%;
       background: #e63946;
       cursor: pointer;
@@ -147,10 +162,15 @@
     }
 
     .music-info {
-      font-size: 12px;
+      font-size: 10px;
       color: #666;
-      margin-top: 5px;
-      text-align: center;
+      white-space: nowrap;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    #music-controls:hover .music-info {
+      opacity: 1;
     }
   </style>
 </head>
@@ -159,15 +179,14 @@
   <div id="info"><h2>Haz clic en una prefectura</h2></div>
   <div id="tooltip" class="prefecture-tooltip"></div>
   
-  <!-- Controles de música -->
+  <!-- Controles de música minimalistas -->
   <div id="music-controls">
     <button id="music-toggle">▶</button>
     <div id="volume-control">
-      <span>🔈</span>
+      <span style="font-size: 12px;">🔈</span>
       <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="0.5">
-      <span>🔊</span>
     </div>
-    <div class="music-info">Música: Japón Tradicional</div>
+    <div class="music-info">Warabe no Uta</div>
   </div>
 
   <!-- Elemento de audio para la música de fondo -->
@@ -177,7 +196,25 @@
   </audio>
 
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <script src="prefecturasInfo.js"></script>
+  <script>
+    // Datos de ejemplo para las prefecturas (solo para demostración)
+    const prefecturasInfo = {
+      "Tokyo": {
+        capital: "Tokyo",
+        cultura: ["Festival de Sanja", "Teatro Kabukiza", "Templo Sensoji"],
+        turismo: ["Museo Ghibli", "Palacio Imperial", "Torre de Tokio"],
+        datosCuriosos: ["Tokio tiene la mayor concentración de restaurantes Michelin del mundo."],
+        imagen: "https://via.placeholder.com/300x200?text=Tokyo"
+      },
+      "Kyoto": {
+        capital: "Kyoto",
+        cultura: ["Festival Aoi", "Gion Matsuri", "Ikebana"],
+        turismo: ["Kinkaku-ji", "Arashiyama", "Fushimi Inari"],
+        datosCuriosos: ["Kioto fue la capital imperial de Japón durante más de 1,000 años"],
+        imagen: "https://via.placeholder.com/300x200?text=Kyoto"
+      }
+    };
+  </script>
   <script>
     // Crear mapa centrado en Japón
     const map = L.map('map').setView([37.5, 137.5], 5);
@@ -237,14 +274,13 @@
       } else {
         backgroundMusic.play().catch(error => {
           console.log('La reproducción automática fue prevenida:', error);
-          // Mostrar un mensaje si es necesario
         });
         musicToggle.textContent = '❚❚';
       }
       isMusicPlaying = !isMusicPlaying;
     });
 
-    // Intentar iniciar la música automáticamente (puede ser bloqueado por los navegadores)
+    // Intentar iniciar la música automáticamente
     window.addEventListener('click', function() {
       if (!isMusicPlaying) {
         backgroundMusic.play().then(() => {
@@ -256,58 +292,46 @@
       }
     }, { once: true });
 
-    // Cargar el GeoJSON de Japón
-    fetch("japan.geojson.json")
-      .then(res => res.json())
-      .then(data => {
-        L.geoJSON(data, {
-          onEachFeature: (feature, layer) => {
-            const nombrePrefectura = feature.properties.name;
-            
-            // Evento al pasar el cursor sobre la prefectura
-            layer.on('mouseover', function(e) {
-              // Cambiar estilo al pasar el cursor
-              layer.setStyle({ fillOpacity: 0.7, fillColor: "#ffcc00" });
-              
-              // Mostrar tooltip con el nombre de la prefectura
-              const latlng = e.latlng;
-              tooltip.innerHTML = nombrePrefectura;
-              tooltip.style.opacity = '1';
-              
-              // Posicionar el tooltip cerca del cursor
-              const point = map.latLngToContainerPoint(latlng);
-              tooltip.style.left = (point.x + 10) + 'px';
-              tooltip.style.top = (point.y - 25) + 'px';
-            });
-            
-            // Evento al quitar el cursor de la prefectura
-            layer.on('mouseout', function() {
-              // Restaurar estilo original
-              layer.setStyle({ fillOpacity: 0.5, fillColor: "#4a90e2" });
-              
-              // Ocultar tooltip
-              tooltip.style.opacity = '0';
-            });
-            
-            // Evento al hacer clic en la prefectura
-            layer.on('click', () => mostrarInfo(nombrePrefectura));
-          },
-          style: {
-            color: "#333",
-            weight: 1.2,
-            fillColor: "#4a90e2",
-            fillOpacity: 0.5
-          }
-        }).addTo(map);
-        
-        // Actualizar la posición del tooltip cuando se mueve el cursor
-        map.on('mousemove', function(e) {
-          const point = map.latLngToContainerPoint(e.latlng);
-          tooltip.style.left = (point.x + 10) + 'px';
-          tooltip.style.top = (point.y - 25) + 'px';
-        });
-      })
-      .catch(err => console.error("Error cargando GeoJSON:", err));
+    // Simular la carga de datos GeoJSON (en un caso real, se cargaría desde un archivo)
+    // Para esta demostración, añadimos algunas áreas representativas
+    const areas = [
+      {name: "Tokyo", coords: [[35.6, 139.5], [35.8, 139.9]]},
+      {name: "Kyoto", coords: [[35.0, 135.7], [35.1, 135.8]]}
+    ];
+    
+    areas.forEach(area => {
+      const bounds = L.latLngBounds(area.coords);
+      const rect = L.rectangle(bounds, {
+        color: "#333",
+        weight: 1.2,
+        fillColor: "#4a90e2",
+        fillOpacity: 0.5
+      }).addTo(map);
+      
+      rect.on('mouseover', function(e) {
+        rect.setStyle({ fillOpacity: 0.7, fillColor: "#ffcc00" });
+        const latlng = e.latlng;
+        tooltip.innerHTML = area.name;
+        tooltip.style.opacity = '1';
+        const point = map.latLngToContainerPoint(latlng);
+        tooltip.style.left = (point.x + 10) + 'px';
+        tooltip.style.top = (point.y - 25) + 'px';
+      });
+      
+      rect.on('mouseout', function() {
+        rect.setStyle({ fillOpacity: 0.5, fillColor: "#4a90e2" });
+        tooltip.style.opacity = '0';
+      });
+      
+      rect.on('click', () => mostrarInfo(area.name));
+    });
+    
+    // Actualizar la posición del tooltip cuando se mueve el cursor
+    map.on('mousemove', function(e) {
+      const point = map.latLngToContainerPoint(e.latlng);
+      tooltip.style.left = (point.x + 10) + 'px';
+      tooltip.style.top = (point.y - 25) + 'px';
+    });
   </script>
 </body>
 </html>
