@@ -242,21 +242,31 @@
     const tooltip = document.getElementById('tooltip');
 
     // Función para mostrar información
-    function mostrarInfo(nombre) {
-      const info = prefecturasInfo[nombre];
-      if (info) {
-        document.getElementById('info').innerHTML = `
-          <h2>${nombre}</h2>
-          <img src="${info.imagen}" alt="${nombre}">
-          <p><b>Capital:</b> ${info.capital}</p>
-          <p><b>Cultura:</b><ul>${info.cultura.map(c => `<li>${c}</li>`).join("")}</ul></p>
-          <p><b>Turismo:</b><ul>${info.turismo.map(t => `<li>${t}</li>`).join("")}</ul></p>
-          <p><b>Datos curiosos:</b><ul>${info.datosCuriosos.map(d => `<li>${d}</li>`).join("")}</ul></p>
-        `;
-      } else {
-        document.getElementById('info').innerHTML = `<h2>${nombre}</h2><p>Información no disponible.</p>`;
+  function mostrarInfo(nombre) {
+    const info = prefecturasInfo[nombre];
+    if (info) {
+    // Función helper para generar listas con imágenes opcionales
+      function generarListaConImagenes(items) {
+        return items.map(item => {
+          const contenido = typeof item === 'string' 
+            ? item 
+            : `${item.texto}${item.imagen ? `<br><img src="${item.imagen}" alt="" style="max-width: 100%; height: auto; margin: 5px 0; border-radius: 5px; border: 1px solid #e63946;">` : ''}`;
+          return `<li>${contenido}</li>`;
+        }).join("");
       }
+
+      document.getElementById('info').innerHTML = `
+        <h2>${nombre}</h2>
+        <img src="${info.imagen}" alt="${nombre}" style="width:100%; border-radius:8px; margin-bottom:10px; border:2px solid #e63946;">
+        <p><b>Capital:</b> ${info.capital}</p>
+        <p><b>Cultura:</b><ul>${generarListaConImagenes(info.cultura)}</ul></p>
+        <p><b>Turismo:</b><ul>${generarListaConImagenes(info.turismo)}</ul></p>
+        <p><b>Datos curiosos:</b><ul>${generarListaConImagenes(info.datosCuriosos)}</ul></p>
+      `;
+    } else {
+      document.getElementById('info').innerHTML = `<h2>${nombre}</h2><p>Información no disponible.</p>`;
     }
+  }
 
     // Control de música de fondo
     const backgroundMusic = document.getElementById('background-music');
