@@ -141,14 +141,32 @@ const prefecturasInfo = {
   "Akita": {
     capital: "Akita",
     cultura: [
-    "Kakunodate: es una ciudad conocida por sus calles llenas de antiguas casas de samuráis y mercaderes del periodo Edo.",
-    "Festival de nieve de Yokote: en este festival de 450 años de antigüedad se construyen más de 80 iglúes, además dentro de cada iglú hay un altar en honor a los dioses del agua para rezar por la abundancia de agua limpia.",
-    "Festival Akita Kanto: se celebra a principios de agosto todos los años con el propósito de ahuyentar a los malos espíritus y pedir una buena cosecha de los principales granos cultivados en la región: trigo, arroz, judías, mijo de cola de zorro y mijo chino."
+    {
+      texto: "Kakunodate: es una ciudad conocida por sus calles llenas de antiguas casas de samuráis y mercaderes del periodo Edo.",
+      imagen: "ref/image056.jpg"
+    },
+    {
+      texto: "Festival de nieve de Yokote: en este festival de 450 años de antigüedad se construyen más de 80 iglúes, además dentro de cada iglú hay un altar en honor a los dioses del agua para rezar por la abundancia de agua limpia.",
+      imagen: "ref/image058.jpg"
+    },
+    {
+      texto: "Festival Akita Kanto: se celebra a principios de agosto todos los años con el propósito de ahuyentar a los malos espíritus y pedir una buena cosecha de los principales granos cultivados en la región: trigo, arroz, judías, mijo de cola de zorro y mijo chino.",
+      imagen: "ref/image060.jpg"
+    }
 ],
     turismo: [
-    "Monte Hachimantai:",
-    "Parque de Senshu:",
-    "Lago Tazawa:"
+    {
+      texto: "Monte Hachimantai:",
+      imagen: "ref/image062.jpg"
+    },
+    {
+      texto: "Parque de Senshu:",
+      imagen: "ref/image064.jpg"
+    },
+    {
+      texto: "Lago Tazawa:",
+      imagen: "ref/image066.jpg"
+    }
 ],
     datosCuriosos: [
     "Es la cuna de la raza de perros Akita Inu (como Hachiko, el perro fiel)."
