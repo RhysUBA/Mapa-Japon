@@ -4,7 +4,7 @@ const prefecturasInfo = {
     cultura: [
   {
     texto: "Festival de Noboribetsu Jigoku: es un festival basado en la leyenda de que todos los años a finales de agosto, se abre la tapa del caldero del infierno desde el Valle del Infierno en las aguas termales de Noboribetsu, y el Gran Rey Demonio Enma visita la zona acompañado de sus demonios.",
-    imagen: "ref/image003.jpg"
+    imagen: "imagenes/Hokkaidō.png"
   },
     "En esta zona se celebra el evento deportivo de la Batalla internacional de bolas de nieve o “yukigassen”",
     "Festival de nieve Sapporo Yuki Matsuri: es un festival celebrado en Sapporo (capital de Hokkaido) en donde se crean gigantescas esculturas de nieve y hielo."    
