@@ -176,13 +176,28 @@ const prefecturasInfo = {
   "Yamagata": {
     capital: "Yamagata",
     cultura: [
-    "Festival de cerezas: se celebra en junio en homenaje a las cerezas, ofreciendo la experiencia de recolección de estos frutos provenientes de los huertos locales.",
-    "Festival de Imoni: se celebra todos los septiembres, y se caracteriza por su enorme caldero de seis metros de imoni (guiso de carne y taro/ocumo), con capacidad para alimentar 30.000 invitados. Asimismo, en 2018 el Festival Imoni consiguió el récord mundial Guinness por ser el festival con más personas sirviendo sopa en 8 horas",
-    "Festival Yamagata Hanagasa: se celebra todos los años del 5 al 7 de agosto con la finalidad de honrar la música y la danza tradicionales de la región, contando con la participación de más de 10.000 bailarines."
+    {
+      texto: "Festival de cerezas: se celebra en junio en homenaje a las cerezas, ofreciendo la experiencia de recolección de estos frutos provenientes de los huertos locales.",
+      imagen: "ref/image070.jpg"
+    },
+    {
+      texto: "Festival de Imoni: se celebra todos los septiembres, y se caracteriza por su enorme caldero de seis metros de imoni (guiso de carne y taro/ocumo), con capacidad para alimentar 30.000 invitados. Asimismo, en 2018 el Festival Imoni consiguió el récord mundial Guinness por ser el festival con más personas sirviendo sopa en 8 horas",
+      imagen: "ref/image072.jpg"
+    },
+    {
+      texto: "Festival Yamagata Hanagasa: se celebra todos los años del 5 al 7 de agosto con la finalidad de honrar la música y la danza tradicionales de la región, contando con la participación de más de 10.000 bailarines.",
+      imagen: "ref/image074.jpg"
+    }
 ],
     turismo: [
-    "Monte Zao:",
-    "Templo Risshakuji (Yamadera):"
+    {
+      texto: "Monte Zao:",
+      imagen: "ref/image076.jpg"
+    },
+    {
+      texto: "Templo Risshakuji (Yamadera):",
+      imagen: "ref/image078.jpg"
+    }
 ],
     datosCuriosos: [
     "Yamagata es el productor de aproximadamente el 70% de las cerezas en Japón."
@@ -192,14 +207,32 @@ const prefecturasInfo = {
   "Fukushima": {
     capital: "Fukushima",
     cultura: [
-    "Festival Aizu: se celebra anualmente en honor a los 3000 miembros del Clan Aizu que fallecieron durante la Guerra Civil Boshin. Además, su evento principal es la Procesión Aizu Hanko, una procesión de 500 señores del Dominio Aizu y samuráis.",
-    "Festival de los Faroles de Nihonmatsu: se celebra anualmente el primer sábado, domingo y lunes de octubre, destacándose por ser uno de los festivales más grandes de luces en Japón.",
-    "Festival Soma Nomaoi: en sus inicios fue un evento de maniobras militares con caballos; sin embargo, en la actualidad es una celebración que incluye eventos como un desfile callejero con armaduras samurai, una emocionante carrera de caballos y una competición de captura de banderas a caballo."
+    {
+      texto: "Festival Aizu: se celebra anualmente en honor a los 3000 miembros del Clan Aizu que fallecieron durante la Guerra Civil Boshin. Además, su evento principal es la Procesión Aizu Hanko, una procesión de 500 señores del Dominio Aizu y samuráis.",
+      imagen: "ref/image082.jpg"
+    },
+    {
+      texto: "Festival de los Faroles de Nihonmatsu: se celebra anualmente el primer sábado, domingo y lunes de octubre, destacándose por ser uno de los festivales más grandes de luces en Japón.",
+      imagen: "ref/image084.jpg"
+    },
+    {
+      texto: "Festival Soma Nomaoi: en sus inicios fue un evento de maniobras militares con caballos; sin embargo, en la actualidad es una celebración que incluye eventos como un desfile callejero con armaduras samurai, una emocionante carrera de caballos y una competición de captura de banderas a caballo.",
+      imagen: "ref/image086.jpg"
+    }
 ],
     turismo: [
-    "Ouchi-juku",
-    "Lago Inawashiro",
-    "Castillo Tsuruga"
+    {
+      texto: "Ouchi-juku",
+      imagen: "ref/image088.jpg"
+    },
+    {
+      texto: "Lago Inawashiro",
+      imagen: "ref/image090.jpg"
+    },
+    {
+      texto: "Castillo Tsuruga",
+      imagen: "ref/image092"
+    }
 ],
     datosCuriosos: [
     "Fukushima es el mayor productor de duraznos de Japón"
@@ -209,13 +242,28 @@ const prefecturasInfo = {
   "Ibaraki": {
     capital: "Mito",
     cultura: [
-    "Festival Hitachi Sakura: es un festival celebrado en la ciudad de Hitachi, que consiste en una procesión de carrozas denominadas “Fūryūmono”, cada una de estas contiene diversos artefactos mecánicos con unas marionetas manejadas por tres personas.",
-    "Festival Mito Komon: se remonta a 1961, honra a Tokugawa Mitsukuni, también conocido como Mito Kōmon, el segundo señor del Dominio de Mito. Su evento principal es el espectáculo de 5000 fuegos artificiales reflejados en el lago Senba."
+    {
+      texto: "Festival Hitachi Sakura: es un festival celebrado en la ciudad de Hitachi, que consiste en una procesión de carrozas denominadas “Fūryūmono”, cada una de estas contiene diversos artefactos mecánicos con unas marionetas manejadas por tres personas.",
+      imagen: "ref/image095.jpg"
+    },
+    {
+      texto: "Festival Mito Komon: se remonta a 1961, honra a Tokugawa Mitsukuni, también conocido como Mito Kōmon, el segundo señor del Dominio de Mito. Su evento principal es el espectáculo de 5000 fuegos artificiales reflejados en el lago Senba.",
+      imagen: "ref/image097.jpg"
+    }
 ],
     turismo: [
-    "Kairaku-en",
-    "Santuario Kashima",
-    "Castillo Mito"
+    {
+      texto: "Kairaku-en",
+      imagen: "ref/image099.jpg"
+    },
+    {
+      texto: "Santuario Kashima",
+      imagen: "ref/image101.jpg"
+    },
+    {
+      texto: "Castillo Mito",
+      imagen: "ref/image103.jpg"
+    }
 ],
     datosCuriosos: [
     "Ibaraki es considera como la cuna del aikido, ya que en esta prefectura nació su fundador Morihei Ueshiba."
@@ -225,14 +273,32 @@ const prefecturasInfo = {
   "Tochigi": {
     capital: "Utsunomiya",
     cultura: [
-    "Mashiko-yaki: es una artesanía tradicional cerámica caracterizada por su textura rugosa que fue concebida en Toshigi",
-    "Nikko: es una ciudad con gran importancia en el mundo budista y sintoístas, cuyos santuarios y templos que están declarados como Patrimonio Mundial por la UNESCO, conformados por 103 estructuras repartidas en tres complejos (9 Tesoros Nacionales y 94 Propiedades Culturales Importantes). Estos consisten en el santuario Nikkō Tōshō-gū, el templo Nikkosan Rinnoji, y el santuario Nikko Futarasan.",
-    "Festival de Otoño de Tochigi: se celebra cada dos años, y es un evento famoso por sus carrozas festivas tradicionales con figuras de deidades y héroes históricos."
+    {
+      texto: "Mashiko-yaki: es una artesanía tradicional cerámica caracterizada por su textura rugosa que fue concebida en Toshigi",
+      imagen: "ref/image107.jpg"
+    },
+    {
+      texto: "Nikko: es una ciudad con gran importancia en el mundo budista y sintoístas, cuyos santuarios y templos que están declarados como Patrimonio Mundial por la UNESCO, conformados por 103 estructuras repartidas en tres complejos (9 Tesoros Nacionales y 94 Propiedades Culturales Importantes). Estos consisten en el santuario Nikkō Tōshō-gū, el templo Nikkosan Rinnoji, y el santuario Nikko Futarasan.",
+      imagen: "ref/image109.png"
+    },
+    {
+      texto: "Festival de Otoño de Tochigi: se celebra cada dos años, y es un evento famoso por sus carrozas festivas tradicionales con figuras de deidades y héroes históricos.",
+      imagen: "ref/image111.jpg"
+    }
 ],
     turismo: [
-    "Ashikaga Flower Park",
-    "Museo de Bellas Artes de la Prefectura de Tochigi",
-    "Cascada Kegon"
+    {
+      texto: "Ashikaga Flower Park",
+      imagen: "ref/image113.jpg"
+    },
+    {
+      texto: "Museo de Bellas Artes de la Prefectura de Tochigi",
+      imagen: "ref/image115.jpg"
+    },
+    {
+      texto: "Cascada Kegon",
+      imagen: "ref/image117.jpg"
+    }
 ],
     datosCuriosos: [
     "Tochigi es el mayor productor de fresas de Japón"
@@ -242,14 +308,32 @@ const prefecturasInfo = {
   "Gunma": {
     capital: "Maebashi",
     cultura: [
-    "Festival Tatebayashi Koinobori: cada año, para celebrar las vísperas del Día del Niño, se colocan serpentinas de carpas que decoran el río Tsuruuda durante más de un mes.",
-    "Festival Kiryu Yaginushi: en esta celebración se instalan múltiples torres de yagura por toda la ciudad, y cientos de personas, tanto locales como visitantes, se reúnen para bailar al ritmo de música folclórica Yagibushi.",
-    "Templo Shorinzan Daruma-ji: es un templo ubicado en la ciudad Takasaki (conocida como la cuna del daruma), se cree que en este templo se originó la tradición de vender daruma como amuleto de Año Nuevo."
+    {
+      texto: "Festival Tatebayashi Koinobori: cada año, para celebrar las vísperas del Día del Niño, se colocan serpentinas de carpas que decoran el río Tsuruuda durante más de un mes.",
+      imagen: "ref/image121.jpg"
+    },
+    {
+      texto: "Festival Kiryu Yaginushi: en esta celebración se instalan múltiples torres de yagura por toda la ciudad, y cientos de personas, tanto locales como visitantes, se reúnen para bailar al ritmo de música folclórica Yagibushi.",
+      imagen: "ref/image123.jpg"
+    },
+    {
+      texto: "Templo Shorinzan Daruma-ji: es un templo ubicado en la ciudad Takasaki (conocida como la cuna del daruma), se cree que en este templo se originó la tradición de vender daruma como amuleto de Año Nuevo.",
+      imagen: "ref/image125.jpg"
+    }
 ],
     turismo: [
-    "Parque Nacional Oze",
-    "Santuario Haruna",
-    "Monte Akagi"
+    {
+      texto: "Parque Nacional Oze",
+      imagen: "ref/image127.jpg"
+    },   
+    {
+      texto: "Santuario Haruna",
+      imagen: "ref/image129.jpg"
+    },
+    {
+      texto: "Monte Akagi",
+      imagen: "ref/image131.jpg"
+    }
 ],
     datosCuriosos: [
     "Gunma produce el 80% de los darumas de Japón"
@@ -259,14 +343,32 @@ const prefecturasInfo = {
   "Saitama": {
     capital: "Saitama",
     cultura: [
-    "Festival Nocturno de Chichibu: se celebra cada año los días 2 y 3 de diciembre en el santuario Chichibu con una procesión de 6 carrozas que llegan a pesar entre 10 y 20 toneladas. El momento culmine del festival tiene lugar en la plaza frente al ayuntamiento, cuando una carroza tras otra asciende por la ladera hasta la plaza y todas se alinean.",
-    "Ruinas de castillo de Oshi: consideradas una de las siete principales fortalezas de la región de Kanto, tras la Restauración Meiji todas las estructuras del castillo fueron destruidas y la zona se convirtió en un parque público. El actual torreón fue reconstruido en 1988 para impulsar el turismo local y funciona como el Museo de Historia Local.",
-    "Museo del Arte del Bonsái de Omiya: es el primer museo público del mundo dedicado exclusivamente al tradicional arte japonés del bonsái (árboles miniaturas en macetas). Antiguamente, se creía que las deidades vivían en los diminutos bonsáis, pero en la actualidad su cuidado es un arte consolidado."
+    {
+      texto: "Festival Nocturno de Chichibu: se celebra cada año los días 2 y 3 de diciembre en el santuario Chichibu con una procesión de 6 carrozas que llegan a pesar entre 10 y 20 toneladas. El momento culmine del festival tiene lugar en la plaza frente al ayuntamiento, cuando una carroza tras otra asciende por la ladera hasta la plaza y todas se alinean.",
+      imagen: "ref/image135.jpg"
+    },
+    {
+      texto: "Ruinas de castillo de Oshi: consideradas una de las siete principales fortalezas de la región de Kanto, tras la Restauración Meiji todas las estructuras del castillo fueron destruidas y la zona se convirtió en un parque público. El actual torreón fue reconstruido en 1988 para impulsar el turismo local y funciona como el Museo de Historia Local.",
+      imagen: "ref/image137.jpg"
+    },
+    {
+      texto: "Museo del Arte del Bonsái de Omiya: es el primer museo público del mundo dedicado exclusivamente al tradicional arte japonés del bonsái (árboles miniaturas en macetas). Antiguamente, se creía que las deidades vivían en los diminutos bonsáis, pero en la actualidad su cuidado es un arte consolidado.",
+      imagen: "ref/image139.jpg"
+    }
 ],
     turismo: [
-    "Santuario Mitsumine",
-    "Parque Nacional Musashi Kyuryo",
-    "Parque Hitsujiyama"
+    {
+      texto: "Santuario Mitsumine",
+      imagen: "ref/image141.jpg"
+    },
+    {
+      texto: "Parque Nacional Musashi Kyuryo",
+      imagen: "ref/image143.jpg"
+    },
+    {
+      texto: "Parque Hitsujiyama",
+      imagen: "ref/image145.jpg"
+    }
 ],
     datosCuriosos: [
     "Es el escenario del anime \"Lucky Star\" (en la ciudad de Washimiya)."
