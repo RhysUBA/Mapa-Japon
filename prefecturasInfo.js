@@ -36,14 +36,32 @@ const prefecturasInfo = {
   "Aomori": {
     capital: "Aomori",
     cultura: [
-    "Festival Aomori Nebuta: se celebra cada año del 2 al 7 de agosto, relacionándose con el Tanabata, en donde su momento climático es el desfile diario de enromes carrozas de papel pintadas a mano e iluminadas por dentro.",
-    "Festival de los Cerezos en Flor de Hirosaki: durante finales de abril hasta principios de mayo florecen los 2600 cerezos del parque Hirosaki en donde se producen mayor cantidad flores gracias a una técnica derivada a la poda de manzanos.",
-    "Sannai Maruyama: es un yacimiento arqueológico del periodo Jomon (13000-300 a. C.) designado por la UNESCO como Patrimonio de la Humanidad bajo el nombre de “Sitios prehistóricos de Jōmon en el norte de Japón”"
+    {
+      texto: "Festival Aomori Nebuta: se celebra cada año del 2 al 7 de agosto, relacionándose con el Tanabata, en donde su momento climático es el desfile diario de enromes carrozas de papel pintadas a mano e iluminadas por dentro.",
+      imagen: "ref/image016.jpg"
+    },
+    {
+      texto: "Festival de los Cerezos en Flor de Hirosaki: durante finales de abril hasta principios de mayo florecen los 2600 cerezos del parque Hirosaki en donde se producen mayor cantidad flores gracias a una técnica derivada a la poda de manzanos.",
+      imagen: "ref/image018.jpg"
+    },
+    {
+      texto: "Sannai Maruyama: es un yacimiento arqueológico del periodo Jomon (13000-300 a. C.) designado por la UNESCO como Patrimonio de la Humanidad bajo el nombre de “Sitios prehistóricos de Jōmon en el norte de Japón”",
+      imagen: "ref/image020.jpg"
+    }
 ],
     turismo: [
-    "Castillo de Hirosaki",
-    "Lago Towada",
-    "Puente Tsuru-no-Mai"
+    {
+      texto: "Castillo de Hirosaki",
+      imagen: "ref/image022.jpg"
+    },
+    {
+      texto: "Lago Towada",
+      imagen: "ref/image024.jpg"
+    },
+    {
+      texto: "Puente Tsuru-no-Mai",
+      imagen: "ref/image026.jpg"
+    }
 ],
     datosCuriosos: [
     "En su capital también llamada Aomori se registra las mayores nevadas en el mundo."
@@ -53,14 +71,32 @@ const prefecturasInfo = {
   "Iwate": {
     capital: "Morioka",
     cultura: [
-    "Hiraizumi: es un pueblo en donde se encuentran varios templos y jardines diseñados según los principios del Budismo de la Tierra Pura, cabe destacar que el templo Chusonji localizado en esta área es Patrimonio de la Humanidad por la UNESCO.",
-    "La mina de hierro de Hashino: son las ruinas de una fundición de hierro y un antiguo alto horno construido durante el siglo XIX siendo reconocido como el horno alto de estilo occidental más antiguo de Japón, además de conformar como parte de la Lista del Patrimonio Mundial de la UNESCO.",
-    "Ruinas de Goshono: En 1989, se encontraron los restos de una construcción subterránea del período Jomon en Goshono, por tanto se ejecutó una investigación con la finalidad de confirmar su contenido hasta ser designado como sitio histórico nacional en 1993; posteriormente, en 2002 se inauguró como el actual \"Parque Goshono Jomon\"."
+    {
+      texto: "Hiraizumi: es un pueblo en donde se encuentran varios templos y jardines diseñados según los principios del Budismo de la Tierra Pura, cabe destacar que el templo Chusonji localizado en esta área es Patrimonio de la Humanidad por la UNESCO.",
+      imagen: "ref/image028.jpg"
+    },
+    {
+      texto: "La mina de hierro de Hashino: son las ruinas de una fundición de hierro y un antiguo alto horno construido durante el siglo XIX siendo reconocido como el horno alto de estilo occidental más antiguo de Japón, además de conformar como parte de la Lista del Patrimonio Mundial de la UNESCO.",
+      imagen: "ref/image030.jpg"
+    },
+    {
+      texto: "Ruinas de Goshono: En 1989, se encontraron los restos de una construcción subterránea del período Jomon en Goshono, por tanto se ejecutó una investigación con la finalidad de confirmar su contenido hasta ser designado como sitio histórico nacional en 1993; posteriormente, en 2002 se inauguró como el actual \"Parque Goshono Jomon\".",
+      imagen: "ref/image032.jpg"
+    }
 ],
     turismo: [
-    "Desfiladero de Geibikei",
-    "Monte Iwate",
-    "Costa de Sanriku"
+    {
+      texto: "Desfiladero de Geibikei",
+      imagen: "ref/image034.jpg"
+    },
+    {
+      texto: "Monte Iwate",
+      imagen: "ref/image036.jpg"
+    },
+    {
+      texto: "Costa de Sanriku",
+      imagen: "ref/image038.jpg"
+    }
 ],
     datosCuriosos: [
     "La prefectura es conocida por la obra literaria Tōno Monogatari de Yanagita Kunio que recopila 119 historias folclóricas transmitidas de forma oral."
@@ -70,14 +106,32 @@ const prefecturasInfo = {
   "Miyagi": {
     capital: "Sendai",
     cultura: [
-    "Muñecas Kokeshi: es una artesanía japonesa, cuyo origen reside en el mundo de los juguetes, y como amuleto para la buena fortuna; asimismo, tradicionalmente existen 12 tipos de Kokeshi variando en su forma, color y elaboración, sin embargo en Miyagi las más emblemáticas son la Naruko, Sakunami, Tōgatta, y Yajirō.",
-    "Festival Tanabata de Sendai: llamado coloquialmente \"festival de las estrellas\", se celebra entre julio y agosto en conjunto con otros festivales semejantes en todo Japón, cuando según la leyenda las estrellas Orihime y Hikoboshi (también conocidas como Altair y Vega) se encuentran. Este festival es famoso por sus largas serpentinas de 3 a 5 metros elaboradas artesanalmente.",
-    "Festival Aoba Matsuri: Originario del periodo Edo, es una celebración del aniversario de muerte de la emblemática figura histórica Date Masamune en la ciudad de Sendai, conocida sobre todo por la danza del gorrión que se interpreta en sus calles."
+    {
+      texto: "Muñecas Kokeshi: es una artesanía japonesa, cuyo origen reside en el mundo de los juguetes, y como amuleto para la buena fortuna; asimismo, tradicionalmente existen 12 tipos de Kokeshi variando en su forma, color y elaboración, sin embargo en Miyagi las más emblemáticas son la Naruko, Sakunami, Tōgatta, y Yajirō.",
+      imagen: "ref/image042.jpg"
+    },
+    {
+      texto: "Festival Tanabata de Sendai: llamado coloquialmente \"festival de las estrellas\", se celebra entre julio y agosto en conjunto con otros festivales semejantes en todo Japón, cuando según la leyenda las estrellas Orihime y Hikoboshi (también conocidas como Altair y Vega) se encuentran. Este festival es famoso por sus largas serpentinas de 3 a 5 metros elaboradas artesanalmente.",
+      imagen: "ref/image044.jpg"
+    },
+    {
+      texto: "Festival Aoba Matsuri: Originario del periodo Edo, es una celebración del aniversario de muerte de la emblemática figura histórica Date Masamune en la ciudad de Sendai, conocida sobre todo por la danza del gorrión que se interpreta en sus calles.",
+      imagen: "ref/image046.jpg"
+    }
 ],
     turismo: [
-    "La bahía de Matsushima:",
-    "Castillo Aoba:",
-    "Mausoleo de Date Masamune (Zuihōden):"
+    {
+      texto: "La bahía de Matsushima:",
+      imagen: "ref/image048.jpg"
+    },
+    {
+      texto: "Castillo Aoba:",
+      imagen: "ref/image050.jpg"
+    },
+    {
+      texto: "Mausoleo de Date Masamune (Zuihōden):",
+      imagen: "ref/image052.jpg"
+    }
 ],
     datosCuriosos: [
     "En las montañas de Zao ocurre un fenómeno meteorológico donde cientos de árboles se recubren con nieve y hielo, lo cual les da una apariencia similar a “monstruos”."
