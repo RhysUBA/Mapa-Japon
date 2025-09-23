@@ -108,7 +108,7 @@ const prefecturasInfo = {
     cultura: [
     {
       texto: "Muñecas Kokeshi: es una artesanía japonesa, cuyo origen reside en el mundo de los juguetes, y como amuleto para la buena fortuna; asimismo, tradicionalmente existen 12 tipos de Kokeshi variando en su forma, color y elaboración, sin embargo en Miyagi las más emblemáticas son la Naruko, Sakunami, Tōgatta, y Yajirō.",
-      imagen: "ref/image042.jpg"
+      imagen: "ref/image042.png"
     },
     {
       texto: "Festival Tanabata de Sendai: llamado coloquialmente \"festival de las estrellas\", se celebra entre julio y agosto en conjunto con otros festivales semejantes en todo Japón, cuando según la leyenda las estrellas Orihime y Hikoboshi (también conocidas como Altair y Vega) se encuentran. Este festival es famoso por sus largas serpentinas de 3 a 5 metros elaboradas artesanalmente.",
@@ -275,14 +275,32 @@ const prefecturasInfo = {
   "Tokyo": {
     capital: "Tokyo",
     cultura: [
-    "Festival de Sanja: es una celebración, con cerca de 100 mikoshi, o capillas portátiles, en las que se colocan simbólicamente las divinidades sintoístas, las cuales grupos de fieles las transportan en los hombros mientras recorren las calles, se cree que esta tradición trae fortuna a los negocios y residentes de Asakusa.",
-    "Teatro Kabukiza: es el principal teatro para representaciones de teatro kabuki (arte teatral reconocido como parte del Patrimonio Cultural Inmaterial de la Humanidad) de Tokio. El edificio original fue construido en 1889 por el periodista Fukuchi Gen’ichirō, sin embargo fue destruido por un incendio, hasta que en marzo de 1950 el teatro Kabukiza abrió de nuevo sus puertas al público.",
-    "Templo Sensoji: es el templo budista más antiguo de Tokio, se encuentra situado en el barrio de Asakusa, y está dedicado a Kannon Bosatsu, la deidad de la misericordia. Según la leyenda, se construyó en Tokio cuando en el siglo VII dos hermanos encontraron una estatua de Kannon Bosatsu en el río Sumida y decidieron consagrarla en un pequeño templo para que todos los habitantes pudieran adorarla."
+    {
+      texto: "Festival de Sanja: es una celebración, con cerca de 100 mikoshi, o capillas portátiles, en las que se colocan simbólicamente las divinidades sintoístas, las cuales grupos de fieles las transportan en los hombros mientras recorren las calles, se cree que esta tradición trae fortuna a los negocios y residentes de Asakusa.",
+      imagen: "ref/image163.jpg"
+    },
+    {
+      texto: "Teatro Kabukiza: es el principal teatro para representaciones de teatro kabuki (arte teatral reconocido como parte del Patrimonio Cultural Inmaterial de la Humanidad) de Tokio. El edificio original fue construido en 1889 por el periodista Fukuchi Gen’ichirō, sin embargo fue destruido por un incendio, hasta que en marzo de 1950 el teatro Kabukiza abrió de nuevo sus puertas al público.",
+      imagen: "ref/image165.jpg"
+    },
+    {
+      texto: "Templo Sensoji: es el templo budista más antiguo de Tokio, se encuentra situado en el barrio de Asakusa, y está dedicado a Kannon Bosatsu, la deidad de la misericordia. Según la leyenda, se construyó en Tokio cuando en el siglo VII dos hermanos encontraron una estatua de Kannon Bosatsu en el río Sumida y decidieron consagrarla en un pequeño templo para que todos los habitantes pudieran adorarla.",
+      imagen: "ref/image167.jpg"
+    }
 ],
     turismo: [
-    "Museo Ghibli",
-    "Los Jardines Orientales del Palacio Imperial",
-    "Torre de Tokio"
+    {
+      texto: "Museo Ghibli",
+      imagen: "ref/image169.jpg"
+    },
+    {
+      texto: "Los Jardines Orientales del Palacio Imperial",
+      imagen: "ref/image171.jpg"
+    },
+    {
+      texto: "Torre de Tokio",
+      imagen: "ref/image173.jpg"
+    }
 ],
     datosCuriosos: [
     "Tokio tiene la mayor concentración de restaurantes Michelin del mundo."
