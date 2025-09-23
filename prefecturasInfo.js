@@ -4,15 +4,27 @@ const prefecturasInfo = {
     cultura: [
   {
     texto: "Festival de Noboribetsu Jigoku: es un festival basado en la leyenda de que todos los años a finales de agosto, se abre la tapa del caldero del infierno desde el Valle del Infierno en las aguas termales de Noboribetsu, y el Gran Rey Demonio Enma visita la zona acompañado de sus demonios.",
-    imagen: "imagenes/Hokkaidō.png"
+    imagen: "ref/image003.jpg"
   },
     "En esta zona se celebra el evento deportivo de la Batalla internacional de bolas de nieve o “yukigassen”",
-    "Festival de nieve Sapporo Yuki Matsuri: es un festival celebrado en Sapporo (capital de Hokkaido) en donde se crean gigantescas esculturas de nieve y hielo."    
+  {
+    texto: "Festival de nieve Sapporo Yuki Matsuri: es un festival celebrado en Sapporo (capital de Hokkaido) en donde se crean gigantescas esculturas de nieve y hielo.",
+    imagen: "ref/image005.jpg"
+  },
   ],
     turismo: [
-    "Parque nacional de Shiretoko",
-    "Cueva azul de Otaru",
-    "La granja de lavanda Tomita"
+    {
+      texto: "Parque nacional de Shiretoko",
+      imagen: "ref/image007.jpg"
+    },
+    {
+      texto: "Cueva azul de Otaru",
+      imagen: "ref/image009.jpg"
+    },
+    {
+      texto: "La granja de lavanda Tomita",
+      imagen: "ref/image011.jpg"
+    }
 ],
     datosCuriosos: [
     "Hokkaido significa “camino del mar del Norte”",
