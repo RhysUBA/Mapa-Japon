@@ -378,14 +378,32 @@ const prefecturasInfo = {
   "Chiba": {
     capital: "Chiba",
     cultura: [
-    "Gran Festival de Verano de Sawara: se celebra cada año el fin de semana posterior al 10 de julio en la ciudad de Katori, donde el evento principal es una procesión de 24 carrozas con varias figuras mitológicas e históricas japonesas; cabe destacar que, este festival fue declarado como parte del Patrimonio Cultural Inmaterial por la UNESCO.",
-    "Katori Jingu: es uno de los santuarios sintoístas en más antiguo de Japón, está dedicado a Futsunushi no Mikoto el protector de los militares.",
-    "Mamemaki: es una tradición llevada a cabo durante el Setsubun (El último día de invierno), la cual por lo general consiste en arrojar granos de soja para alejar a los malos espíritus en las puertas de las personas y atraer la buena suerte. Sin embargo, en Chiba al ser la productora del 80% de los cacahuetes de Japón tiene la peculiaridad única entre las demás prefecturas de arrojar cacahuetes para ahuyentar a los malos espíritus."
+    {
+      texto: "Gran Festival de Verano de Sawara: se celebra cada año el fin de semana posterior al 10 de julio en la ciudad de Katori, donde el evento principal es una procesión de 24 carrozas con varias figuras mitológicas e históricas japonesas; cabe destacar que, este festival fue declarado como parte del Patrimonio Cultural Inmaterial por la UNESCO.",
+      imagen: "ref/image149.jpg"
+    },
+    {
+      texto: "Katori Jingu: es uno de los santuarios sintoístas en más antiguo de Japón, está dedicado a Futsunushi no Mikoto el protector de los militares.",
+      imagen: "ref/image151.jpg"
+    },
+    {
+      texto: "Mamemaki: es una tradición llevada a cabo durante el Setsubun (El último día de invierno), la cual por lo general consiste en arrojar granos de soja para alejar a los malos espíritus en las puertas de las personas y atraer la buena suerte. Sin embargo, en Chiba al ser la productora del 80% de los cacahuetes de Japón tiene la peculiaridad única entre las demás prefecturas de arrojar cacahuetes para ahuyentar a los malos espíritus.",
+      imagen: "ref/image153.jpg"
+    }
 ],
     turismo: [
-    "Mother Farm",
-    "Castillo de Chiba",
-    "Parque cuasi-nacional de Suigo-Tsukuba"
+    {
+      texto: "Mother Farm",
+      imagen: "ref/image155.jpg"
+    },
+    {
+      texto: "Castillo de Chiba",
+      imagen: "ref/image157.jpg"
+    },
+    {
+      texto: "Parque cuasi-nacional de Suigo-Tsukuba",
+      imagen: "ref/image159.jpg"
+    }
 ],
     datosCuriosos: [
     "Kentaro Miura el aclamado mangaka creador de Berserk, nació en la ciudad de Chiba."
@@ -430,14 +448,32 @@ const prefecturasInfo = {
   "Kanagawa": {
     capital: "Yokohama",
     cultura: [
-    "Kamakura-bori: es un tipo técnica de laca en la que se tallan diseños en madera y luego se recubren con laca roja o negra, para finalmente ser pulida.",
-    "Santuario Tsurugaoka Hachimangu: es el santuario sintoísta más importante de la ciudad de  (antigua capital de Japón) con más de 800 años, dedicado a Hachiman la deidad guardiana de los guerreros samurái.",
-    "Festival de Kamakura: es un evento que comienza el segundo domingo de abril y dura una semana, para dar la bienvenida a la primavera en la ciudad de Kamakura. Lo más destacado del festival son las actuaciones tradicionales, como la danza «Shizuno-Mai», y el tiro con arco a caballo yabusame."
+    {
+      texto: "Kamakura-bori: es un tipo técnica de laca en la que se tallan diseños en madera y luego se recubren con laca roja o negra, para finalmente ser pulida.",
+      imagen: "ref/image177.jpg"
+    },
+    {
+      texto: "Santuario Tsurugaoka Hachimangu: es el santuario sintoísta más importante de la ciudad de  (antigua capital de Japón) con más de 800 años, dedicado a Hachiman la deidad guardiana de los guerreros samurái.",
+      imagen: "ref/image179.jpg"
+    },
+    {
+      texto: "Festival de Kamakura: es un evento que comienza el segundo domingo de abril y dura una semana, para dar la bienvenida a la primavera en la ciudad de Kamakura. Lo más destacado del festival son las actuaciones tradicionales, como la danza «Shizuno-Mai», y el tiro con arco a caballo yabusame.",
+      imagen: "ref/image181.jpg"
+    }
 ],
     turismo: [
-    "Parque Yamashita",
-    "Jardines zoológicos Zoorasia Yokohama",
-    "Museo Gundam de Yokohama"
+    {
+      texto: "Parque Yamashita",
+      imagen: "ref/image183.jpg"
+    },
+    {
+      texto: "Jardines zoológicos Zoorasia Yokohama",
+      imagen: "ref/image185"
+    },
+    {
+      texto: "Museo Gundam de Yokohama",
+      imagen: "ref/image187.jpg"
+    }
 ],
     datosCuriosos: [
     "La ciudad de Yokohama en la prefectura Kanagawa fue el epicentro de la modernización durante la Era Meiji (1868-1912)."
@@ -447,14 +483,32 @@ const prefecturasInfo = {
   "Niigata": {
     capital: "Niigata",
     cultura: [
-    "Festival Murakami Taisai: es uno de los tres festivales más importantes de la prefectura de Niigata. Durante el festival, tres santuarios portátiles se utilizan para transportar a la deidad del santuario mientras transcurre “el ritual del viaje”, una procesión festiva con tambores que serpentea por las calles de la ciudad. El clímax de este evento ocurre cuando 19 carrozas gigantes llamadas \" Oshagiri \" se reúnen para desfilar por el centro de la ciudad.",
-    "Túnel de la luz: Como parte del Trienal de Arte Internacional de Echigo-Tsumari 2018, el grupo MAD Architects fue invitado a revitalizar con la creación de atmosferas artísticas al Túnel de la Garganta de Kiyotsu, un histórico pasadizo de 750 metros que atraviesa distintivas formaciones rocosas y ofrece vistas panorámicas de una de las tres grandes gargantas de Japón.",
-    "Seda Ojiya Tsumugi: es un tipo de tejido de seda tradicional originado en el pueblo Ojiya, este tejido se caracteriza por su textura rugosa y su brillo natural, resultado de la transformación de la seda cruda de los capullos en hilo de seda antes de hilarla para obtener hilos suaves y ligeros que transmiten una sensación de calidez."
+    {
+      texto: "Festival Murakami Taisai: es uno de los tres festivales más importantes de la prefectura de Niigata. Durante el festival, tres santuarios portátiles se utilizan para transportar a la deidad del santuario mientras transcurre “el ritual del viaje”, una procesión festiva con tambores que serpentea por las calles de la ciudad. El clímax de este evento ocurre cuando 19 carrozas gigantes llamadas \" Oshagiri \" se reúnen para desfilar por el centro de la ciudad.",
+      imagen: "ref/image191.png"
+    },
+    {
+      texto: "Túnel de la luz: Como parte del Trienal de Arte Internacional de Echigo-Tsumari 2018, el grupo MAD Architects fue invitado a revitalizar con la creación de atmosferas artísticas al Túnel de la Garganta de Kiyotsu, un histórico pasadizo de 750 metros que atraviesa distintivas formaciones rocosas y ofrece vistas panorámicas de una de las tres grandes gargantas de Japón.",
+      imagen: "ref/image193.jpg"
+    },
+    {
+      texto: "Seda Ojiya Tsumugi: es un tipo de tejido de seda tradicional originado en el pueblo Ojiya, este tejido se caracteriza por su textura rugosa y su brillo natural, resultado de la transformación de la seda cruda de los capullos en hilo de seda antes de hilarla para obtener hilos suaves y ligeros que transmiten una sensación de calidez.",
+      imagen: "ref/image195.jpg"
+    }
 ],
     turismo: [
-    "Pueblo de Yuzawa:",
-    "Ciudad de Tokamachi:",
-    "Isla Sado:"
+    {
+      texto: "Pueblo de Yuzawa:",
+      imagen: "ref/image197.jpg"
+    },
+    {
+      texto: "Ciudad de Tokamachi:",
+      imagen: "ref/image199.jpg"
+    },
+    {
+      texto: "Isla Sado:",
+      imagen: "ref/image201.jpg"
+    }
 ],
     datosCuriosos: [
     "Niigata es tan famosa por su arroz que tiene su propia \"Ruta del Arroz\", donde se pueden visitar arrozales, molinos y fábricas de sake."
@@ -464,14 +518,32 @@ const prefecturasInfo = {
   "Toyama": {
     capital: "Toyama",
     cultura: [
-    "Cerámica de bronce de Takaota: es un tipo de cerámica producida en los alrededores de la ciudad de Takaoka. Se utilizan trece métodos de fundición diferentes según el tipo de producto que se quiere fabricar y la forma de expresión deseada requerido, los resultados varían desde pequeños artículos como adornos de interior, herramientas budistas y jarrones, hasta artículos más grandes como campanas de templo, estatuas budistas y estatuas de cobre.",
-    "Papel de Washi de Toyama: es una artesanía tradicional cuya singularidad radica en su proceso único de preparación, además se utiliza da comúnmente para pinturas, grabados, artículos de decoración y accesorios con diseños.",
-    "Festival Owara Kaze no Bon: se celebra cada año los días 1 a 3 de septiembre en el pueblo de Yatsuo, con el propósito de apaciguar a la deidad del viento y los tifones ya que durante esas fechas el pueblo es propicio a sufrir calamidades en los cultivos debido a los tifones. Asimismo, este festival debe su fama a los movimientos sincronizados de las mujeres de Owara, vestidas con kimonos iguales y sombreros de paja que les recubren la cara mientras bailan al son de la melodía Ecchu Owara Bushi."
+    {
+      texto: "Cerámica de bronce de Takaota: es un tipo de cerámica producida en los alrededores de la ciudad de Takaoka. Se utilizan trece métodos de fundición diferentes según el tipo de producto que se quiere fabricar y la forma de expresión deseada requerido, los resultados varían desde pequeños artículos como adornos de interior, herramientas budistas y jarrones, hasta artículos más grandes como campanas de templo, estatuas budistas y estatuas de cobre.",
+      imagen: "ref/image205.png"
+    },
+    {
+      texto: "Papel de Washi de Toyama: es una artesanía tradicional cuya singularidad radica en su proceso único de preparación, además se utiliza da comúnmente para pinturas, grabados, artículos de decoración y accesorios con diseños.",
+      imagen: "ref/image207.png"
+    },
+    {
+      texto: "Festival Owara Kaze no Bon: se celebra cada año los días 1 a 3 de septiembre en el pueblo de Yatsuo, con el propósito de apaciguar a la deidad del viento y los tifones ya que durante esas fechas el pueblo es propicio a sufrir calamidades en los cultivos debido a los tifones. Asimismo, este festival debe su fama a los movimientos sincronizados de las mujeres de Owara, vestidas con kimonos iguales y sombreros de paja que les recubren la cara mientras bailan al son de la melodía Ecchu Owara Bushi.",
+      imagen: "ref/image209.jpg"
+    }
 ],
     turismo: [
-    "Parque Nacional Chubu Sangaku",
-    "Complejo de aguas termales Unazuki Onsen",
-    "Museo de Arte en Vidrio de Toyama:"
+    {
+      texto: "Parque Nacional Chubu Sangaku",
+      imagen: "ref/image211.jpg"
+    },
+    {
+      texto: "Complejo de aguas termales Unazuki Onsen",
+      imagen: "ref/image213.jpg"
+    },
+    {
+      texto: "Museo de Arte en Vidrio de Toyama:",
+      imagen: "ref/image215.jpg"
+    }
 ],
     datosCuriosos: [
     "En Toyama se produce aproximadamente el 90% de los productos de bronce de Japón."
@@ -481,14 +553,32 @@ const prefecturasInfo = {
   "Ishikawa": {
     capital: "Kanazawa",
     cultura: [
-    "Hoja de Oro de Kanazawa: es una lámina de aleación de oro extremadamente fina producida en la ciudad de Kanazawa, y es utilizada como decoración tanto en artesanía moderna como tradicional.",
-    "Porcelana de Kutani: es un tipo de porcelana japonesa esmaltada cuyas características estan centradas en el detallismo y minuciosidad, mostrando dibujos de paisajes, figuras humanas o animales, mientras utilizan pigmentos japoneses superpuestos, lo que proporciona a las piezas un aspecto lujoso y brillante.",
-    "Laca Wajima: se fabrica en la ciudad de Wajima. Sus características más destacadas son su hermoso acabado, el polvo de alta calidad utilizado para su producción llamado jinoko, que solo se puede encontrar en Wajima. Gracias al uso de jinoko como imprimación, se garantiza la alta durabilidad de la laca, además la laca Wajima utiliza técnicas de decoración como el relleno de áreas talladas con oro o el uso de polvo de oro o plata."
+    {
+      texto: "Hoja de Oro de Kanazawa: es una lámina de aleación de oro extremadamente fina producida en la ciudad de Kanazawa, y es utilizada como decoración tanto en artesanía moderna como tradicional.",
+      imagen: "ref/image219.jpg"
+    },
+    {
+      texto: "Porcelana de Kutani: es un tipo de porcelana japonesa esmaltada cuyas características estan centradas en el detallismo y minuciosidad, mostrando dibujos de paisajes, figuras humanas o animales, mientras utilizan pigmentos japoneses superpuestos, lo que proporciona a las piezas un aspecto lujoso y brillante.",
+      imagen: "ref/image221.jpg"
+    },
+    {
+      texto: "Laca Wajima: se fabrica en la ciudad de Wajima. Sus características más destacadas son su hermoso acabado, el polvo de alta calidad utilizado para su producción llamado jinoko, que solo se puede encontrar en Wajima. Gracias al uso de jinoko como imprimación, se garantiza la alta durabilidad de la laca, además la laca Wajima utiliza técnicas de decoración como el relleno de áreas talladas con oro o el uso de polvo de oro o plata.",
+      imagen: "ref/image223.png"
+    }
 ],
     turismo: [
-    "Castillo de Kanazawa",
-    "Kenroku-en",
-    "Museo de Arte de la Prefectura de Ishikawa"
+    {
+      texto: "Castillo de Kanazawa",
+      imagen: "ref/image225.jpg"
+    },
+    { 
+      texto: "Kenroku-en",
+      imagen: "ref/image227.jpg"
+    },
+    {
+      texto: "Museo de Arte de la Prefectura de Ishikawa",
+      imagen: "ref/image229.jpg"
+    }
 ],
     datosCuriosos: [
     "Kanazawa, la capital de Ishikawa, produce el 99% de la hoja de oro de Japón."
@@ -498,14 +588,32 @@ const prefecturasInfo = {
   "Fukui": {
     capital: "Fukui",
     cultura: [
-    "La Aldea de Cuchillos Takefu: es un taller, tienda y museo dedicado a la forja artesanal de cuchillos y herramientas de corte. Este centro consta de varios edificios, incluyendo un edificio cilíndrico alberga un pequeño museo sobre la historia de la cuchillería de la zona, así como una plataforma de observación con vistas a un gran taller que permite a los visitantes observar a los artesanos en acción.",
-    "Museo de Dinosaurios de la Prefectura de Fukui: es un centro de investigación de dinosaurios en Japón, reconocido como uno de los museos de dinosaurios más grandes del mundo y el más grande de Japón.",
-    "Papel tradicional (washi) Echizen: es un papel tradicional elaborado en la cuenca del río Okafuto, en la región de Echizen, utilizando principalmente con las fibras internas de la corteza de plantas. El washi echizen presenta elegantes e inspiradores colores naturales y es conocido por su alta calidad, su resistencia a los insectos y su larga vida útil."
+    {    
+      texto: "La Aldea de Cuchillos Takefu: es un taller, tienda y museo dedicado a la forja artesanal de cuchillos y herramientas de corte. Este centro consta de varios edificios, incluyendo un edificio cilíndrico alberga un pequeño museo sobre la historia de la cuchillería de la zona, así como una plataforma de observación con vistas a un gran taller que permite a los visitantes observar a los artesanos en acción.",
+      imagen: "ref/image233.jpg"
+    },
+    {
+      texto: "Museo de Dinosaurios de la Prefectura de Fukui: es un centro de investigación de dinosaurios en Japón, reconocido como uno de los museos de dinosaurios más grandes del mundo y el más grande de Japón.",
+      imagen: "ref/image235.jpg"
+    },
+    {
+      texto: "Papel tradicional (washi) Echizen: es un papel tradicional elaborado en la cuenca del río Okafuto, en la región de Echizen, utilizando principalmente con las fibras internas de la corteza de plantas. El washi echizen presenta elegantes e inspiradores colores naturales y es conocido por su alta calidad, su resistencia a los insectos y su larga vida útil.",
+      imagen: "ref/image237.jpg"
+    }
 ],
     turismo: [
-    "Castillo Ichijodani",
-    "Acantilados de Tojinbo",
-    "Castillo de Maruoka"
+    {
+      texto: "Castillo Ichijodani",
+      imagen: "ref/image239.jpg"
+    },
+    {
+      texto: "Acantilados de Tojinbo",
+      imagen: "ref/image240.jpg"
+    },
+    {
+      texto: "Castillo de Maruoka",
+      imagen: "ref/image242.jpg"
+    }
 ],
     datosCuriosos: [
     "La ciudad de Sabae, en Fukui, produce alrededor del 90% de las monturas para gafas fabricadas en Japón."
