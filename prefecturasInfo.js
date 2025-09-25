@@ -623,14 +623,32 @@ const prefecturasInfo = {
   "Yamanashi": {
     capital: "Kofu",
     cultura: [
-    "Festival del fuego de Yoshida: se celebra cada año los días 26 y 27 de agosto en el santuario Kitaguchi Hongu Fuji Sengen y el santuario Suwa Jinja para marcar el final de la temporada de ascensión al monte Fuji.",
-    "Centro del Patrimonio Mundial del Monte Fuji: es un museo que fue inaugurado en 2017 tras la inscripción del Monte Fuji como Patrimonio de la Humanidad por la UNESCO en 2013, cuenta con obras de arte tradicionales, una enorme escultura que representa el monte Fuji en 3D, y exposiciones interactivas que revelan cómo se formó el monte Fuji.",
-    "Festival de Shingenko: se celebra cada año en la ciudad de Kofu, para conmemorar el legado de Takeda Shingen, un famoso general del período de los Reinos Combatientes. Asimismo, el evento principal del festival es el \"Despliegue del Batallón Koshu\", que es una marcha de más de 1000 samuráis con armadura ceremonial completa por las calles."
+    {
+      texto: "Festival del fuego de Yoshida: se celebra cada año los días 26 y 27 de agosto en el santuario Kitaguchi Hongu Fuji Sengen y el santuario Suwa Jinja para marcar el final de la temporada de ascensión al monte Fuji.",
+      imagen: "ref/image246.jpg"
+    },
+    {
+      texto: "Centro del Patrimonio Mundial del Monte Fuji: es un museo que fue inaugurado en 2017 tras la inscripción del Monte Fuji como Patrimonio de la Humanidad por la UNESCO en 2013, cuenta con obras de arte tradicionales, una enorme escultura que representa el monte Fuji en 3D, y exposiciones interactivas que revelan cómo se formó el monte Fuji.",
+      imagen: "ref/image248.jpg"
+    },
+    {
+      texto: "Festival de Shingenko: se celebra cada año en la ciudad de Kofu, para conmemorar el legado de Takeda Shingen, un famoso general del período de los Reinos Combatientes. Asimismo, el evento principal del festival es el \"Despliegue del Batallón Koshu\", que es una marcha de más de 1000 samuráis con armadura ceremonial completa por las calles.",
+      imagen: "ref/image250.jpg"
+    }
 ],
     turismo: [
-    "Monte Fuji",
-    "Chureito Pagoda",
-    "Templo Erinji"
+    {
+      texto: "Monte Fuji",
+      imagen: "ref/image252.png"
+    },
+    {
+      texto: "Chureito Pagoda",
+      imagen: "ref/image254.png"
+    },
+    {
+      texto: "Templo Erinji",
+      imagen: "ref/image256.jpg"
+    }
 ],
     datosCuriosos: [
     "Yamanashi es el mayor productor de uvas y melocotones de Japón"
@@ -640,14 +658,32 @@ const prefecturasInfo = {
   "Nagano": {
     capital: "Nagano",
     cultura: [
-    "Festival del fuego de Nozawa: es el festival más famoso de Dosojin, una deidad de la región de Hokuriku Shinetsu, y se celebra el 15 de enero de cada invierno. En esta celebración un gran número de residentes lleva antorchas e intenta quemar un santuario provisional llamado shaden, mientras que los de 25 años defienden la estructura y los de 42 años cantan y gritan; asimismo, el objetivo de este festival es festejar el nacimiento del primer hijo de una familia, y rezar por la abundancia de la próxima cosecha.",
-    "Parque de los macacos de nieve de Jigokudani:  en esta instalación ofrece la experiencia única de ver a la población de primates japoneses local que bajan durante los meses de invierno bañarse en las aguas termales.",
-    "Museo Ninja de Togakure:  está dedicado a la escuela local de ninjutsu Togakure, cuyos orígenes se remontan al siglo XII; además, ocupa un complejo de varios edificios rehabilitados y restaurados en donde se exhiben múltiples armas tradicionales como katanas y shuriken, con varios paneles informativos sobre el arte ninjutsu."
-],
+    {
+      texto: "Festival del fuego de Nozawa: es el festival más famoso de Dosojin, una deidad de la región de Hokuriku Shinetsu, y se celebra el 15 de enero de cada invierno. En esta celebración un gran número de residentes lleva antorchas e intenta quemar un santuario provisional llamado shaden, mientras que los de 25 años defienden la estructura y los de 42 años cantan y gritan; asimismo, el objetivo de este festival es festejar el nacimiento del primer hijo de una familia, y rezar por la abundancia de la próxima cosecha.",
+      imagen: "ref/image260.jpg"
+    },
+    {
+      texto: "Parque de los macacos de nieve de Jigokudani:  en esta instalación ofrece la experiencia única de ver a la población de primates japoneses local que bajan durante los meses de invierno bañarse en las aguas termales.",
+      imagen: "ref/image262.png"
+    },
+    {
+      texto: "Museo Ninja de Togakure:  está dedicado a la escuela local de ninjutsu Togakure, cuyos orígenes se remontan al siglo XII; además, ocupa un complejo de varios edificios rehabilitados y restaurados en donde se exhiben múltiples armas tradicionales como katanas y shuriken, con varios paneles informativos sobre el arte ninjutsu.",
+      imagen: "ref/image264.png"
+    }
+    ],
     turismo: [
-    "Estación de esquí Shiga Kogen",
-    "Templo Zenkō-ji",
-    "Castillo de Matsumoto"
+    {
+      texto: "Estación de esquí Shiga Kogen",
+      imagen: "ref/image266.jpg"
+    },
+    {
+      texto: "Templo Zenkō-ji",
+      imagen: "ref/image268.jpg"
+    },
+    {
+      texto: "Castillo de Matsumoto",
+      imagen: "ref/image270.jpg"
+    }
 ],
     datosCuriosos: [
     "Los Juegos Olímpicos de Invierno de 1998 se celebraron en Nagano."
@@ -657,14 +693,32 @@ const prefecturasInfo = {
   "Gifu": {
     capital: "Gifu",
     cultura: [
-    "Mino washi: es un estilo tradicional de papel japonés producido en la ciudad de Mino desde hace más de 1.300 años. Este papel es particularmente famoso por su color blanco puro, además tiene la capacidad para filtrar excelentemente la luz, manteniendo una consistencia rígida y duradera.",
-    "Linternas de Gifu: están construidas alrededor de un marco delgado y recubiertas con piezas de papel tradicional. Además, el papel es producido localmente en la prefectura Gifu, usualmente mostrando dibujos detallados, como flores, aves y paisajes otoñales.",
-    "Cerámica Mino: llamada así por la provincia histórica de Mino (ahora parte de la prefectura de Gifu), se subdivide multiples estilos representativos que incluyen la cerámica Setoguro, la cerámica Ki-Seto, la cerámica Shino y la cerámica Oribe, cuyas características más reconocibles son sus esmalte negro, amarillento, blanco lechoso, y verde oscuro respectivamente. Actualmente, la cerámica de Mino representa aproximadamente el 50% de la producción total de cerámica en Japón."
+    {
+      texto: "Mino washi: es un estilo tradicional de papel japonés producido en la ciudad de Mino desde hace más de 1.300 años. Este papel es particularmente famoso por su color blanco puro, además tiene la capacidad para filtrar excelentemente la luz, manteniendo una consistencia rígida y duradera.",
+      imagen: "ref/image274.jpg"
+    },
+    {
+      texto: "Linternas de Gifu: están construidas alrededor de un marco delgado y recubiertas con piezas de papel tradicional. Además, el papel es producido localmente en la prefectura Gifu, usualmente mostrando dibujos detallados, como flores, aves y paisajes otoñales.",
+      imagen: "ref/image276.jpg"
+    },
+    {
+      texto: "Cerámica Mino: llamada así por la provincia histórica de Mino (ahora parte de la prefectura de Gifu), se subdivide multiples estilos representativos que incluyen la cerámica Setoguro, la cerámica Ki-Seto, la cerámica Shino y la cerámica Oribe, cuyas características más reconocibles son sus esmalte negro, amarillento, blanco lechoso, y verde oscuro respectivamente. Actualmente, la cerámica de Mino representa aproximadamente el 50% de la producción total de cerámica en Japón.",
+      imagen: "ref/image278.jpg"
+    }
 ],
     turismo: [
-    "Monte Norikura",
-    "Castillo de Gifu",
-    "Villa de Shirakawa"
+    {
+      texto: "Monte Norikura",
+      imagen: "ref/image280.jpg"
+    },
+    {
+      texto: "Castillo de Gifu",
+      imagen: "ref/image282.jpg"
+    },
+    {
+      texto: "Villa de Shirakawa",
+      imagen: "ref/image284.jpg"
+    }
 ],
     datosCuriosos: [
     "La cerámica proveniente de Gifu representa aproximadamente el 50% de la producción total en Japón."
@@ -674,14 +728,32 @@ const prefecturasInfo = {
   "Shizuoka": {
     capital: "Shizuoka",
     cultura: [
-    "Festival de Hamamatsu: es una popular competición de vuelo de cometas, y \"batallas de cometas\" donde intentan cortar el hilo de la cometa de los rivales con la fricción del propio hilo. Tiene lugar a finales de primavera y coincide con las vacaciones de la Semana Dorada (una serie de días festivos que se celebran entre el 29 de abril y el 5 de mayo).",
-    "Festival del Barco Negro: Conmemora la llegada del Comodoro Perry y sus \"Barcos Negros\" en 1853. Incluye desfiles con disfraces de estadounidenses y japoneses de la época, además de una actuación de la ceremonia de la firma del Tratado de Shimoda.",
-    "Festival de los Cerezos en Flor de Kawazu: es uno de los festivales de la floración del cerezo más singulares de Japón, dado que la variedad de cerezo de Kawazu se caracteriza por florecer antes de la temporada habitual, la celebración de este festival se disfruta desde principios de febrero hasta principios de marzo."
+    {
+      texto: "Festival de Hamamatsu: es una popular competición de vuelo de cometas, y \"batallas de cometas\" donde intentan cortar el hilo de la cometa de los rivales con la fricción del propio hilo. Tiene lugar a finales de primavera y coincide con las vacaciones de la Semana Dorada (una serie de días festivos que se celebran entre el 29 de abril y el 5 de mayo).",
+      imagen: "ref/image288.png"
+    },
+    {
+      texto: "Festival del Barco Negro: Conmemora la llegada del Comodoro Perry y sus \"Barcos Negros\" en 1853. Incluye desfiles con disfraces de estadounidenses y japoneses de la época, además de una actuación de la ceremonia de la firma del Tratado de Shimoda.",
+      imagen: "ref/image290.jpg"
+    },
+    {
+      texto: "Festival de los Cerezos en Flor de Kawazu: es uno de los festivales de la floración del cerezo más singulares de Japón, dado que la variedad de cerezo de Kawazu se caracteriza por florecer antes de la temporada habitual, la celebración de este festival se disfruta desde principios de febrero hasta principios de marzo.",
+      imagen: "ref/image292.jpg"
+    }
 ],
     turismo: [
-    "Castillo de Sunpu",
-    "Pinar de Miho-no-Matsubara:",
-    "Museo del Té Verde:"
+    {
+      texto: "Castillo de Sunpu",
+      imagen: "ref/image294.jpg"
+    },
+    {
+      texto: "Pinar de Miho-no-Matsubara:",
+      imagen: "ref/image296.jpg"
+    },
+    {
+      texto: "Museo del Té Verde:",
+      imagen: "ref/image298.jpg"
+    }
 ],
     datosCuriosos: [],
     imagen: "imagenes/Shizuoka.png"
@@ -689,14 +761,32 @@ const prefecturasInfo = {
   "Aichi": {
     capital: "Nagoya",
     cultura: [
-    "Festival de Nagoya: es el festival de otoño más grande de la ciudad de Nagoya, celebrándose anualmente desde su primer evento en 1955. El momento más destacado es el Desfile de héroes locales, donde unos 650 guerreros y sirvientes que representan a famosos samuráis relacionados con Nagoya (Oda Nobunaga, Toyotomi Hideyoshi, Tokugawa Ieyasu) marchan por las calles.",
-    "Cerámica de Tokoname: es un tipo de cerámica japonesa proveniente de la ciudad de Tokoname, ubicación de uno de los seis hornos antiguos de Japón. La característica más notoria de esta cerámica es su color rojo que se desarrolló como resultado del hierro que se encuentra en la arcilla.",
-    "Cerámica de Seto: es un estilo de la cerámica japonesa que se produce en la ciudad de Seto, esta artesanía uno es de los seis hornos antiguos de Japón y la cuna de la cerámica esmaltada japonesa, se caracteriza por su arcilla blanca acentuada por la pintura y el esmaltado decorativos."
+    {
+      texto: "Festival de Nagoya: es el festival de otoño más grande de la ciudad de Nagoya, celebrándose anualmente desde su primer evento en 1955. El momento más destacado es el Desfile de héroes locales, donde unos 650 guerreros y sirvientes que representan a famosos samuráis relacionados con Nagoya (Oda Nobunaga, Toyotomi Hideyoshi, Tokugawa Ieyasu) marchan por las calles.",
+      imagen: "ref/image302.jpg"
+    },
+    {
+      texto: "Cerámica de Tokoname: es un tipo de cerámica japonesa proveniente de la ciudad de Tokoname, ubicación de uno de los seis hornos antiguos de Japón. La característica más notoria de esta cerámica es su color rojo que se desarrolló como resultado del hierro que se encuentra en la arcilla.",
+      imagen: "ref/image304.jpg"
+    },
+    {
+      texto: "Cerámica de Seto: es un estilo de la cerámica japonesa que se produce en la ciudad de Seto, esta artesanía uno es de los seis hornos antiguos de Japón y la cuna de la cerámica esmaltada japonesa, se caracteriza por su arcilla blanca acentuada por la pintura y el esmaltado decorativos.",
+      imagen: "ref/image306.jpg"
+    }
 ],
     turismo: [
-    "Museo del Automóvil de Toyota:",
-    "Museo de la Ciencia de Nagoya:",
-    "Castillo de Nagoya:"
+    {
+      texto: "Museo del Automóvil de Toyota:",
+      imagen: "ref/image308.jpg"
+    },
+    {
+      texto: "Museo de la Ciencia de Nagoya:",
+      imagen: "ref/image310.jpg"
+    },
+    {
+      texto: "Castillo de Nagoya:",
+      imagen: "ref/image312.jpg"
+    }
 ],
     datosCuriosos: [
     "La ciudad de Seto en la prefectura Aichi, es la cuna de la cerámica esmaltada en el país, lográndose ver su influencia con la palabra japonesa para cerámica o vajilla es \"setomono\" literalmente significa \"cosas de Seto”."
@@ -706,14 +796,32 @@ const prefecturasInfo = {
   "Mie": {
     capital: "Tsu",
     cultura: [
-    "Museo Ninja de Iga-ryu: es un museo dedicado a la historia ninja, que consta de una residencia con trampillas secretas, dos salas de exposiciones y un escenario donde se presentan espectáculos ninja.",
-    "Shikinen Sengu: es una tradición única que implica la reconstrucción y renovación del Gran Santuario de Ise Jingu cada 20 años. La tradición se ha practicado desde el período Heian y se basa en la creencia de que los dioses que residen en el santuario necesitan un nuevo hogar cada dos décadas.",
-    "Santuario interior de Ise: incluye 125 santuarios sintoístas, dedicados a Amaterasu-Omikami, la deidad afín al sol y la más venerada de la religión sintoísta. Su superficie es aproximadamente la misma que la del centro de París. Anualmente se celebran aquí más de 1500 rituales para orar por la prosperidad de la familia imperial, la paz mundial y una cosecha abundante."
+    {
+      texto: "Museo Ninja de Iga-ryu: es un museo dedicado a la historia ninja, que consta de una residencia con trampillas secretas, dos salas de exposiciones y un escenario donde se presentan espectáculos ninja.",
+      imagen: "ref/image316.jpg"
+    },
+    {
+      texto: "Shikinen Sengu: es una tradición única que implica la reconstrucción y renovación del Gran Santuario de Ise Jingu cada 20 años. La tradición se ha practicado desde el período Heian y se basa en la creencia de que los dioses que residen en el santuario necesitan un nuevo hogar cada dos décadas.",
+      imagen: "ref/image318.jpg"
+    },
+    {
+      texto: "Santuario interior de Ise: incluye 125 santuarios sintoístas, dedicados a Amaterasu-Omikami, la deidad afín al sol y la más venerada de la religión sintoísta. Su superficie es aproximadamente la misma que la del centro de París. Anualmente se celebran aquí más de 1500 rituales para orar por la prosperidad de la familia imperial, la paz mundial y una cosecha abundante.",
+      imagen: "ref/image320.jpg"
+    }
 ],
     turismo: [
-    "Monte Gozaisho:",
-    "Isla de las perlas de Mikimoto:",
-    "Parque floral de Nabana no Sato:"
+    {
+      texto: "Monte Gozaisho:",
+      imagen: "ref/image322.jpg"
+    },
+    {
+      texto: "Isla de las perlas de Mikimoto:",
+      imagen: "ref/image324.jpg"
+    },
+    {
+      texto: "Parque floral de Nabana no Sato:",
+      imagen: "ref/image326.jpg"
+    }
 ],
     datosCuriosos: [
     "La prefectura Mie es una de las dos cunas del ninjutsu en Japón."
@@ -723,14 +831,32 @@ const prefecturasInfo = {
   "Shiga": {
     capital: "Otsu",
     cultura: [
-    "Cerámica de Shigaraki: es una cerámica tradicional que proviene del área de Shigaraki, siendo esta artesanía uno de los seis hornos antiguos de Japón, se destaca por su arcilla arenosa de color naranja cálido obtenida de las orillas del lago Biwa, lo que confiere su robustez y estética terrosa.",
-    "Nagahama Hikiyama Matsuri: es una celebración que tiene lugar cada año en la ciudad de Nahagama desde 9 hasta el 17 de abril, el elemento principal de este festival son las enormes carrozas, que actúan a modo de teatro para la interpretación del arte Kabuki por parte de los niños de entre cinco y doce años; cabe destacar que, este evento se añadió a la lista de Patrimonio Cultural Inmaterial de la UNESCO en el 2016.",
-    "Festival del Fuego de Katsube: Se celebra el segundo sábado de enero en el santuario Katsube, el punto culminante del festival llega cuando se encienden las antorchas gigantes en forma de enormes plumeros de casi 7 metros de largo, y mientras arden unos jóvenes de la localidad vestidos tan solo con un fundoshi (taparrabos) bailan alrededor del fuego."
+    {
+      texto: "Cerámica de Shigaraki: es una cerámica tradicional que proviene del área de Shigaraki, siendo esta artesanía uno de los seis hornos antiguos de Japón, se destaca por su arcilla arenosa de color naranja cálido obtenida de las orillas del lago Biwa, lo que confiere su robustez y estética terrosa.",
+      imagen: "ref/image330.jpg"
+    },
+    {
+      texto: "Nagahama Hikiyama Matsuri: es una celebración que tiene lugar cada año en la ciudad de Nahagama desde 9 hasta el 17 de abril, el elemento principal de este festival son las enormes carrozas, que actúan a modo de teatro para la interpretación del arte Kabuki por parte de los niños de entre cinco y doce años; cabe destacar que, este evento se añadió a la lista de Patrimonio Cultural Inmaterial de la UNESCO en el 2016.",
+      imagen: "ref/image332.jpg"
+    },
+    {
+      texto: "Festival del Fuego de Katsube: Se celebra el segundo sábado de enero en el santuario Katsube, el punto culminante del festival llega cuando se encienden las antorchas gigantes en forma de enormes plumeros de casi 7 metros de largo, y mientras arden unos jóvenes de la localidad vestidos tan solo con un fundoshi (taparrabos) bailan alrededor del fuego.",
+      imagen: "ref/image334.jpg"
+    }
 ],
     turismo: [
-    "Templo Enryaku-ji:",
-    "Castillo de Hikone:",
-    "Lago Biwa:"
+    {
+      texto: "Templo Enryaku-ji:",
+      imagen: "ref/image336.jpg"
+    },
+    {
+      texto: "Castillo de Hikone:",
+      imagen: "ref/image338.jpg"
+    },
+    {
+      texto: "Lago Biwa:",
+      imagen: "ref/image340.jpg"
+    }
 ],
     datosCuriosos: [
     "El lago Biwa es uno de los 20 lagos más antiguos del mundo"
@@ -740,14 +866,32 @@ const prefecturasInfo = {
   "Kyōto": {
     capital: "Kyoto",
     cultura: [
-    "Festival Aoi: es uno de los tres festivales más famosos de Kioto. Su principal atractivo es un gran desfile, en el que más de 500 personas, vestidas al estilo del Período Heian (794-1185), caminan desde el Palacio Imperial hasta los Santuarios Kamo.",
-    "Gion Matsuri: es el festival más famoso de Japón, cuyo origen se remonta a al año 869 como una ceremonia religiosa para apaciguar a los dioses durante el brote de una epidemia. Asimismo, se celebra durante todo el mes de julio, pero su punto culminante es el desfile de las enormes y ornamentadas \"carrozas\" flotantes el 17 de julio; cabe destacar que este festival es un patrimonio cultural inmaterial de la UNESCO.",
-    "Ikebana: es un arte de arreglo floral que se creó en Kioto durante el Periodo Muromachi (1336-1573), cuyo objetivo es \"expresar la forma de la naturaleza en un recipiente\"."
+    {
+      texto: "Festival Aoi: es uno de los tres festivales más famosos de Kioto. Su principal atractivo es un gran desfile, en el que más de 500 personas, vestidas al estilo del Período Heian (794-1185), caminan desde el Palacio Imperial hasta los Santuarios Kamo.",
+      imagen: "ref/image344.jpg"
+    },
+    {
+      texto: "Gion Matsuri: es el festival más famoso de Japón, cuyo origen se remonta a al año 869 como una ceremonia religiosa para apaciguar a los dioses durante el brote de una epidemia. Asimismo, se celebra durante todo el mes de julio, pero su punto culminante es el desfile de las enormes y ornamentadas \"carrozas\" flotantes el 17 de julio; cabe destacar que este festival es un patrimonio cultural inmaterial de la UNESCO.",
+      imagen: "ref/image346.jpg"
+    },
+    {
+      texto: "Ikebana: es un arte de arreglo floral que se creó en Kioto durante el Periodo Muromachi (1336-1573), cuyo objetivo es \"expresar la forma de la naturaleza en un recipiente\".",
+      imagen: "ref/image348.jpg"
+    }
 ],
     turismo: [
-    "Amanohashidate:",
-    "Arashiyama:",
-    "Kinkaku-ji:"
+    {
+      texto: "Amanohashidate:",
+      imagen: "ref/image350.jpg"
+    },
+    {
+      texto: "Arashiyama:",
+      imagen: "ref/image352.jpg"
+    },
+    {
+      texto: "Kinkaku-ji:",
+      imagen: "ref/image354.jpg"
+    }
 ],
     datosCuriosos: [
     "Kioto fue la capital imperial de Japón durante más de 1,000 años (794-1868)"
@@ -757,14 +901,32 @@ const prefecturasInfo = {
   "Ōsaka": {
     capital: "Osaka",
     cultura: [
-    "Festival de Tenjin: es un evento que consiste en múltiples por rituales, bailes, música y una procesión de capillas portátiles, además de un despliegue de fuegos artificiales de una hora y media clausura el festival. Cabe añadir que este festival tiene más de mil años, concibiéndose originalmente para celebrar a Sugawara Michizane, el dios japonés del estudio y la caligrafía.",
-    "Festival de Kishiwada Danjiri: esta celebración nació con el propósito de agradecer por la cosecha abundante, mediante una competencia de más de 500 hombres que arrastran a toda velocidad un danjiri (carro tirado por personas) de más de 4 tonelada.",
-    "Grupo Mozu-Furuichi Kofun: es una agrupación de túmulos funerarios en el área de Mozu que datan desde el período Kofun (siglo III al VI d. C). Originalmente esta construcción constaba de más de 100 tumbas con formas redondas, curvadas y rectangulares, de las que menos del 50% se conservan."
+    {
+      texto: "Festival de Tenjin: es un evento que consiste en múltiples por rituales, bailes, música y una procesión de capillas portátiles, además de un despliegue de fuegos artificiales de una hora y media clausura el festival. Cabe añadir que este festival tiene más de mil años, concibiéndose originalmente para celebrar a Sugawara Michizane, el dios japonés del estudio y la caligrafía.",
+      imagen: "ref/image358.jpg"
+    },
+    {
+      texto: "Festival de Kishiwada Danjiri: esta celebración nació con el propósito de agradecer por la cosecha abundante, mediante una competencia de más de 500 hombres que arrastran a toda velocidad un danjiri (carro tirado por personas) de más de 4 tonelada.",
+      imagen: "ref/image360.jpg"
+    },
+    {
+      texto: "Grupo Mozu-Furuichi Kofun: es una agrupación de túmulos funerarios en el área de Mozu que datan desde el período Kofun (siglo III al VI d. C). Originalmente esta construcción constaba de más de 100 tumbas con formas redondas, curvadas y rectangulares, de las que menos del 50% se conservan.",
+      imagen: "ref/image362.jpg"
+    }
 ],
     turismo: [
-    "Templo Shitennoji",
-    "Castillo de Osaka",
-    "Edificio Abeno Harukas"
+    {
+      texto: "Templo Shitennoji",
+      imagen: "ref/image364.jpg"
+    },
+    {
+      texto: "Castillo de Osaka",
+      imagen: "ref/image366.jpg"
+    },
+    {
+      texto: "Edificio Abeno Harukas",
+      imagen: "ref/image368.jpg"
+    }
 ],
     datosCuriosos: [
     "El nombre \"Osaka\" (大阪) significa literalmente \"colina grande\"."
